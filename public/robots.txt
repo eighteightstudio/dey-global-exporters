@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow legal pages from indexing
+Disallow: /terms
+Disallow: /privacy
+
+Sitemap: https://www.deyglobalexporters.com/sitemap.xml
