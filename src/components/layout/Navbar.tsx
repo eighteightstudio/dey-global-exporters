@@ -12,7 +12,7 @@ const navLinks = [
   { href: '/products', label: 'Products' },
   { href: '/certifications', label: 'Certifications' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {
@@ -23,7 +23,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--border)]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+
           <Link href="/" className="flex flex-col leading-none" onClick={() => setMobileOpen(false)}>
             <span className="font-bold text-[var(--navy)] tracking-wide text-base font-heading">
               DEY GLOBAL EXPORTERS
@@ -33,7 +33,6 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
@@ -51,17 +50,23 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="https://wa.me/917003455085"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] text-white hover:bg-[#1ebe5d] rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150"
+            >
+              WhatsApp Us
+            </a>
             <Link
               href="/contact"
               className="bg-[var(--navy)] text-white hover:bg-[var(--navy-muted)] rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150"
             >
-              Request a Quote
+              Request Price List
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
           <button
             className="lg:hidden p-2 text-[var(--navy)] rounded-lg hover:bg-[var(--surface)] transition-colors"
             onClick={() => setMobileOpen((prev) => !prev)}
@@ -72,7 +77,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       <div
         className={cn(
           'lg:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-[var(--border)]',
@@ -95,13 +99,22 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-3 mt-2 border-t border-[var(--border)]">
+          <div className="pt-3 mt-2 border-t border-[var(--border)] flex flex-col gap-2">
+            <a
+              href="https://wa.me/917003455085"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center bg-[#25D366] text-white hover:bg-[#1ebe5d] rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-150"
+            >
+              WhatsApp Us
+            </a>
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
               className="block w-full text-center bg-[var(--navy)] text-white hover:bg-[var(--navy-muted)] rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-150"
             >
-              Request a Quote
+              Request Price List
             </Link>
           </div>
         </nav>
