@@ -10,11 +10,11 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with DEY GLOBAL EXPORTERS on WhatsApp"
-        className="flex items-center gap-2 bg-white text-[#25D366] font-semibold text-sm rounded-full shadow-lg px-4 py-3 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+        className="flex items-center gap-3 bg-white text-[#25D366] font-semibold text-base rounded-full shadow-lg px-5 py-4 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
       >
         <svg
           viewBox="0 0 24 24"
-          className="w-5 h-5 flex-shrink-0"
+          className="w-6 h-6 flex-shrink-0"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
