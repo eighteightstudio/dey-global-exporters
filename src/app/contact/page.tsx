@@ -1,4 +1,3 @@
-// src/app/contact/page.tsx
 import type { Metadata } from 'next'
 import { MapPin, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react'
 import { ContactForm } from './ContactForm'
@@ -6,45 +5,12 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export const metadata: Metadata = {
   title: 'Contact Us | DEY GLOBAL EXPORTERS',
-  description: 'Contact DEY GLOBAL EXPORTERS for raw human hair pricing, sample requests, or bulk export inquiries. Reach Sunny Dey and the team based in Kolkata, West Bengal, India. We respond within 24 business hours.',
+  description: 'Contact DEY GLOBAL EXPORTERS for raw human hair pricing, sample requests, or bulk export inquiries. Reach Sunny Dey and the team in Kolkata, West Bengal, India.',
   openGraph: {
     title: 'Contact DEY GLOBAL EXPORTERS | Raw Hair Export Inquiry',
-    description: 'Request a price list, ask about MOQs, or discuss your monthly hair supply requirements. Based in Kolkata, West Bengal, India. WhatsApp, email, and phone available.',
+    description: 'Request a price list or discuss your monthly hair supply requirements. Based in Kolkata, West Bengal, India.',
   },
 }
-
-const contactDetails = [
-  {
-    icon: MapPin,
-    label: 'Office and Warehouse',
-    lines: ['1A, 2/12A Rashmoni Bazar Rd', 'Beleghata, Kolkata, West Bengal 700010', 'India'],
-    href: null,
-  },
-  {
-    icon: Phone,
-    label: 'Phone',
-    lines: ['+91 70034 55085'],
-    href: 'tel:+917003455085',
-  },
-  {
-    icon: Mail,
-    label: 'Export Email',
-    lines: ['deyglobalexporters@gmail.com'],
-    href: 'mailto:deyglobalexporters@gmail.com',
-  },
-  {
-    icon: MessageCircle,
-    label: 'WhatsApp',
-    lines: ['+91 70034 55085', 'Fastest response channel'],
-    href: 'https://wa.me/917003455085',
-  },
-  {
-    icon: Clock,
-    label: 'Working Hours',
-    lines: ['Mon to Sat: 9:00 AM to 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM to 4 AM ET'],
-    href: null,
-  },
-]
 
 export default function ContactPage() {
   return (
@@ -86,37 +52,62 @@ export default function ContactPage() {
               />
 
               <div className="mt-8 flex flex-col gap-4">
-                {contactDetails.map((item) => {
-                  const Icon = item.icon
-                  return (
-                    <div key={item.label} className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
-                      <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
-                        <Icon size={18} className="text-[var(--accent)]" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">
-                          {item.label}
-                        </p>
-                        {item.href ? (
-                          
-                            href={item.href}
-                            target={item.href.startsWith('http') ? '_blank' : undefined}
-                            rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="text-sm text-[var(--navy)] hover:text-[var(--navy-muted)] transition-colors"
-                          >
-                            {item.lines.map((line, i) => (
-                              <span key={i} className="block leading-relaxed">{line}</span>
-                            ))}
-                          </a>
-                        ) : (
-                          item.lines.map((line, i) => (
-                            <p key={i} className="text-sm text-[var(--navy)] leading-relaxed">{line}</p>
-                          ))
-                        )}
-                      </div>
-                    </div>
-                  )
-                })}
+
+                <div className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
+                    <MapPin size={18} className="text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">Office and Warehouse</p>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">1A, 2/12A Rashmoni Bazar Rd</p>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">Beleghata, Kolkata, West Bengal 700010</p>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">India</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
+                    <Phone size={18} className="text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">Phone</p>
+                    <a href="tel:+917003455085" className="text-sm text-[var(--navy)] leading-relaxed block">+91 70034 55085</a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
+                    <Mail size={18} className="text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">Export Email</p>
+                    <a href="mailto:deyglobalexporters@gmail.com" className="text-sm text-[var(--navy)] leading-relaxed block">deyglobalexporters@gmail.com</a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
+                    <MessageCircle size={18} className="text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">WhatsApp</p>
+                    <a href="https://wa.me/917003455085" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--navy)] leading-relaxed block">+91 70034 55085</a>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">Fastest response channel</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
+                    <Clock size={18} className="text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">Working Hours</p>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">Mon to Sat: 9:00 AM to 7:00 PM IST</p>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">IST = UTC+5:30</p>
+                    <p className="text-sm text-[var(--navy)] leading-relaxed">US East overlap: 9 PM to 4 AM ET</p>
+                  </div>
+                </div>
+
               </div>
 
               <div className="mt-5 bg-[var(--navy)] rounded-xl p-5">
@@ -161,29 +152,21 @@ export default function ContactPage() {
             <SectionHeading title="What Happens After You Submit" align="center" />
           </div>
           <div className="grid sm:grid-cols-3 gap-6 text-center">
-            {[
-              {
-                step: '01',
-                title: 'Review and Qualify',
-                desc: 'Our team reviews your inquiry and matches your requirements to available products and current stock.',
-              },
-              {
-                step: '02',
-                title: 'Price List and Quote',
-                desc: 'We respond within 24 business hours with FOB pricing, quantities, and sample order options.',
-              },
-              {
-                step: '03',
-                title: 'Sample Shipment',
-                desc: 'Approve a sample lot before your first bulk order. Same quality and documentation as commercial shipments.',
-              },
-            ].map((item) => (
-              <div key={item.step} className="p-6 bg-white border border-[var(--border)] rounded-2xl">
-                <p className="text-4xl font-bold text-[var(--border)] font-heading mb-3">{item.step}</p>
-                <h3 className="font-bold text-[var(--navy)] font-heading mb-2">{item.title}</h3>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            <div className="p-6 bg-white border border-[var(--border)] rounded-2xl">
+              <p className="text-4xl font-bold text-[var(--border)] font-heading mb-3">01</p>
+              <h3 className="font-bold text-[var(--navy)] font-heading mb-2">Review and Qualify</h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Our team reviews your inquiry and matches your requirements to available products and current stock.</p>
+            </div>
+            <div className="p-6 bg-white border border-[var(--border)] rounded-2xl">
+              <p className="text-4xl font-bold text-[var(--border)] font-heading mb-3">02</p>
+              <h3 className="font-bold text-[var(--navy)] font-heading mb-2">Price List and Quote</h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">We respond within 24 business hours with FOB pricing, quantities, and sample order options.</p>
+            </div>
+            <div className="p-6 bg-white border border-[var(--border)] rounded-2xl">
+              <p className="text-4xl font-bold text-[var(--border)] font-heading mb-3">03</p>
+              <h3 className="font-bold text-[var(--navy)] font-heading mb-2">Sample Shipment</h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Approve a sample lot before your first bulk order. Same quality and documentation as commercial shipments.</p>
+            </div>
           </div>
         </div>
       </section>
