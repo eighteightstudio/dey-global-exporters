@@ -1,4 +1,3 @@
-// src/app/contact/page.tsx
 import type { Metadata } from 'next'
 import { MapPin, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react'
 import { ContactForm } from './ContactForm'
@@ -7,26 +6,26 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 export const metadata: Metadata = {
   title: 'Contact Us | DEY GLOBAL EXPORTERS',
   description:
-    'Contact DEY GLOBAL EXPORTERS for raw human hair pricing, sample requests, or bulk export inquiries. Reach Sunny Dey and the team based in East Medinipur, West Bengal, India. We respond within 24 business hours.',
+    'Contact DEY GLOBAL EXPORTERS for raw Indian temple hair pricing, sample requests, or export inquiries. We respond within 24 business hours. WhatsApp, email, and phone available.',
   openGraph: {
     title: 'Contact DEY GLOBAL EXPORTERS | Raw Hair Export Inquiry',
     description:
-      'Request a price list, ask about MOQs, or discuss your monthly hair supply requirements. Based in East Medinipur, West Bengal, India. WhatsApp, email, and phone available.',
+      'Request a price list, ask about MOQs, or discuss your monthly hair supply requirements. Based in Kolkata, India. 24h response guarantee.',
   },
 }
 
 const contactDetails = [
   {
     icon: MapPin,
-    label: 'Office and Warehouse',
-    lines: ['East Medinipur, West Bengal', 'India'],
-    href: null,
+    label: 'Office & Warehouse',
+    lines: ['Park Street', 'Kolkata, West Bengal 700010', 'India'],
+    href: undefined as string | undefined,
   },
   {
     icon: Phone,
     label: 'Phone',
-    lines: ['+91 98765 43210'],
-    href: 'tel:+919876543210',
+    lines: ['+91 7003455085'],
+    href: 'tel:+917003455085',
   },
   {
     icon: Mail,
@@ -37,39 +36,41 @@ const contactDetails = [
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    lines: ['+91 98765 43210', 'Fastest response channel'],
-    href: 'https://wa.me/919876543210?text=Hello%20DEY%20GLOBAL%20EXPORTERS%2C%20I%20am%20interested%20in%20your%20raw%20hair%20products.',
+    lines: ['+91 7003455085', 'Fastest response channel'],
+    href: 'https://wa.me/917003455085?text=Hello%20DEY%20GLOBAL%20EXPORTERS%2C%20I%20am%20interested%20in%20your%20raw%20hair%20products.',
   },
   {
     icon: Clock,
     label: 'Working Hours',
-    lines: ['Mon to Sat: 9:00 AM to 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM to 4 AM ET'],
-    href: null,
+    lines: ['Mon – Sat: 9:00 AM – 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM – 4 AM ET'],
+    href: undefined as string | undefined,
   },
 ]
 
 export default function ContactPage() {
   return (
     <>
-      <section className="py-28 bg-[var(--navy)]">
+      {/* Hero */}
+      <section className="py-20 bg-[var(--navy)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
             <h1 className="text-4xl md:text-5xl font-bold text-white font-heading leading-tight mb-5">
-              Let&apos;s Talk About Your Hair Supply
+              Let's Talk About Your Hair Supply
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
-              Fill out the inquiry form below with your requirements. Our team reviews every
-              qualified inquiry and responds within 24 business hours with pricing,
-              availability, and sample options.
+              Fill out the inquiry form below with your requirements. We respond to all qualified
+              inquiries within 24 business hours with pricing, availability, and sample options.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Main content */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14">
+            {/* Left — Form */}
             <div>
               <SectionHeading
                 title="Send an Inquiry"
@@ -81,6 +82,7 @@ export default function ContactPage() {
               </div>
             </div>
 
+            {/* Right — Contact info */}
             <div>
               <SectionHeading
                 title="Get in Touch Directly"
@@ -125,15 +127,8 @@ export default function ContactPage() {
                 })}
               </div>
 
-              <div className="mt-5 bg-[var(--navy)] rounded-xl p-5">
-                <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">
-                  Contact Person
-                </p>
-                <p className="text-white font-bold font-heading text-base">Sunny Dey</p>
-                <p className="text-white/60 text-sm mt-0.5">Founder, DEY GLOBAL EXPORTERS</p>
-              </div>
-
-              <div className="mt-4 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
+              {/* Response promise */}
+              <div className="mt-5 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
                 <div className="flex items-start gap-3">
                   <CheckCircle size={18} className="text-emerald-500 flex-shrink-0 mt-0.5" />
                   <div>
@@ -141,12 +136,13 @@ export default function ContactPage() {
                     <p className="text-xs text-[var(--text-muted)] mt-1 leading-relaxed">
                       We respond to all qualified inquiries within 24 business hours with pricing,
                       sample availability, and lead time confirmation. WhatsApp inquiries are
-                      typically answered within 2 to 4 hours during working hours.
+                      typically answered within 2–4 hours during working hours.
                     </p>
                   </div>
                 </div>
               </div>
 
+              {/* WhatsApp CTA */}
               
                 href="https://wa.me/919876543210?text=Hello%20DEY%20GLOBAL%20EXPORTERS%2C%20I%20am%20interested%20in%20your%20raw%20hair%20products."
                 target="_blank"
@@ -163,7 +159,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-[var(--surface)] border-t border-[var(--border)]">
+      {/* What happens next */}
+      <section className="py-16 bg-[var(--surface)] border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10">
             <SectionHeading title="What Happens After You Submit" align="center" />
@@ -172,12 +169,12 @@ export default function ContactPage() {
             {[
               {
                 step: '01',
-                title: 'Review and Qualify',
+                title: 'Review & Qualify',
                 desc: 'Our team reviews your inquiry and matches your requirements to our available products and current stock.',
               },
               {
                 step: '02',
-                title: 'Price List and Quote',
+                title: 'Price List & Quote',
                 desc: 'We respond within 24 business hours with FOB pricing, quantities, and sample order options.',
               },
               {
