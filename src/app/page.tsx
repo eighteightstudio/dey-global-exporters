@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import type { Metadata } from 'next'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { TrustBar } from '@/components/sections/TrustBar'
@@ -12,13 +13,13 @@ import { CtaBanner } from '@/components/sections/CtaBanner'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'DEY GLOBAL EXPORTERS | Raw Indian Temple Hair Exporter',
+  title: 'DEY GLOBAL EXPORTERS | Raw Human Hair Exporter from India',
   description:
-    'DEY GLOBAL EXPORTERS — B2B wholesale exporter of raw Indian temple hair, virgin Remy bundles, wefted extensions, lace closures and frontals from Kolkata, India. Supplying wig manufacturers and hair brands in 20+ countries.',
+    'DEY GLOBAL EXPORTERS — B2B wholesale exporter of raw virgin human hair, single drawn, double drawn, and white hair from East Medinipur, West Bengal, India. Supplying wig manufacturers, extension brands, and wholesale distributors worldwide.',
   openGraph: {
-    title: 'DEY GLOBAL EXPORTERS | Raw Indian Temple Hair Exporter',
+    title: 'DEY GLOBAL EXPORTERS | Raw Human Hair Exporter from India',
     description:
-      'B2B wholesale exporter of raw Indian temple hair from Kolkata, India. Remy bundles, closures, frontals. IEC registered, DGFT compliant.',
+      'B2B wholesale exporter of raw virgin human hair from East Medinipur, West Bengal, India. Temple sourced, household collected, and grassroots network verified. Founded by Sunny Dey.',
   },
 }
 
