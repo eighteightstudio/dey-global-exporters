@@ -3,21 +3,21 @@ import { Globe, Package, CheckCircle, Clock, Award, Truck } from 'lucide-react'
 const trustItems = [
   {
     icon: Globe,
-    value: '20+',
-    label: 'Countries Served',
-    sub: 'USA, EU, Africa, Middle East',
+    value: '10+',
+    label: 'Years of Sourcing',
+    sub: 'Ground-level expertise since 2015',
   },
   {
     icon: Package,
-    value: '500 kg+',
-    label: 'Monthly Export Capacity',
-    sub: 'Scalable on demand',
+    value: '50kg',
+    label: 'Sack Packaging',
+    sub: 'Standard export unit size',
   },
   {
     icon: CheckCircle,
-    value: '100%',
-    label: 'Temple-Sourced Option',
-    sub: 'Ethical, traceable sourcing',
+    value: 'A1',
+    label: 'Quality Grade',
+    sub: 'All products A1 certified',
   },
   {
     icon: Clock,
