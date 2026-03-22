@@ -15,18 +15,12 @@ export const metadata: Metadata = {
   },
 }
 
-interface ContactDetail {
-  icon: React.ElementType
-  label: string
-  lines: string[]
-  href?: string
-}
-
-const contactDetails: ContactDetail[] = [
+const contactDetails = [
   {
     icon: MapPin,
     label: 'Office and Warehouse',
     lines: ['East Medinipur, West Bengal', 'India'],
+    href: null,
   },
   {
     icon: Phone,
@@ -50,19 +44,19 @@ const contactDetails: ContactDetail[] = [
     icon: Clock,
     label: 'Working Hours',
     lines: ['Mon to Sat: 9:00 AM to 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM to 4 AM ET'],
+    href: null,
   },
 ]
 
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
       <section className="py-28 bg-[var(--navy)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
             <h1 className="text-4xl md:text-5xl font-bold text-white font-heading leading-tight mb-5">
-              Let's Talk About Your Hair Supply
+              Let&apos;s Talk About Your Hair Supply
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
               Fill out the inquiry form below with your requirements. Our team reviews every
@@ -73,11 +67,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main content */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14">
-            {/* Left — Form */}
             <div>
               <SectionHeading
                 title="Send an Inquiry"
@@ -89,7 +81,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — Contact info */}
             <div>
               <SectionHeading
                 title="Get in Touch Directly"
@@ -134,7 +125,6 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* Contact person */}
               <div className="mt-5 bg-[var(--navy)] rounded-xl p-5">
                 <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">
                   Contact Person
@@ -143,7 +133,6 @@ export default function ContactPage() {
                 <p className="text-white/60 text-sm mt-0.5">Founder, DEY GLOBAL EXPORTERS</p>
               </div>
 
-              {/* Response promise */}
               <div className="mt-4 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
                 <div className="flex items-start gap-3">
                   <CheckCircle size={18} className="text-emerald-500 flex-shrink-0 mt-0.5" />
@@ -158,7 +147,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* WhatsApp CTA */}
               
                 href="https://wa.me/919876543210?text=Hello%20DEY%20GLOBAL%20EXPORTERS%2C%20I%20am%20interested%20in%20your%20raw%20hair%20products."
                 target="_blank"
@@ -175,14 +163,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* What happens next */}
       <section className="py-20 bg-[var(--surface)] border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10">
-            <SectionHeading
-              title="What Happens After You Submit"
-              align="center"
-            />
+            <SectionHeading title="What Happens After You Submit" align="center" />
           </div>
           <div className="grid sm:grid-cols-3 gap-6 text-center">
             {[
