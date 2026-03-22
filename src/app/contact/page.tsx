@@ -1,24 +1,25 @@
+// src/app/contact/page.tsx
 import type { Metadata } from 'next'
 import { MapPin, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react'
 import { ContactForm } from './ContactForm'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Request a Quote or Price List',
+  title: 'Contact Us | DEY GLOBAL EXPORTERS',
   description:
-    'Contact DEY GLOBAL EXPORTERS for raw Indian temple hair pricing, sample requests, or export inquiries. We respond within 24 business hours. WhatsApp, email, and phone available.',
+    'Contact DEY GLOBAL EXPORTERS for raw human hair pricing, sample requests, or bulk export inquiries. Reach Sunny Dey and the team based in East Medinipur, West Bengal, India. We respond within 24 business hours.',
   openGraph: {
     title: 'Contact DEY GLOBAL EXPORTERS | Raw Hair Export Inquiry',
     description:
-      'Request a price list, ask about MOQs, or discuss your monthly hair supply requirements. Based in Kolkata, India. 24h response guarantee.',
+      'Request a price list, ask about MOQs, or discuss your monthly hair supply requirements. Based in East Medinipur, West Bengal, India. WhatsApp, email, and phone available.',
   },
 }
 
 const contactDetails = [
   {
     icon: MapPin,
-    label: 'Office & Warehouse',
-    lines: ['123 Export Industrial Zone', 'Kolkata, West Bengal 700001', 'India'],
+    label: 'Office and Warehouse',
+    lines: ['East Medinipur, West Bengal', 'India'],
     href: undefined as string | undefined,
   },
   {
@@ -42,7 +43,7 @@ const contactDetails = [
   {
     icon: Clock,
     label: 'Working Hours',
-    lines: ['Mon – Sat: 9:00 AM – 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM – 4 AM ET'],
+    lines: ['Mon to Sat: 9:00 AM to 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM to 4 AM ET'],
     href: undefined as string | undefined,
   },
 ]
@@ -51,7 +52,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-[var(--navy)]">
+      <section className="py-28 bg-[var(--navy)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
@@ -59,8 +60,9 @@ export default function ContactPage() {
               Let's Talk About Your Hair Supply
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
-              Fill out the inquiry form below with your requirements. We respond to all qualified
-              inquiries within 24 business hours with pricing, availability, and sample options.
+              Fill out the inquiry form below with your requirements. Our team reviews every
+              qualified inquiry and responds within 24 business hours with pricing,
+              availability, and sample options.
             </p>
           </div>
         </div>
@@ -106,7 +108,7 @@ export default function ContactPage() {
                           {item.label}
                         </p>
                         {item.href ? (
-                          <a
+                          
                             href={item.href}
                             target={item.href.startsWith('http') ? '_blank' : undefined}
                             rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -127,8 +129,17 @@ export default function ContactPage() {
                 })}
               </div>
 
+              {/* Contact person */}
+              <div className="mt-5 bg-[var(--navy)] rounded-xl p-5">
+                <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">
+                  Contact Person
+                </p>
+                <p className="text-white font-bold font-heading text-base">Sunny Dey</p>
+                <p className="text-white/60 text-sm mt-0.5">Founder, DEY GLOBAL EXPORTERS</p>
+              </div>
+
               {/* Response promise */}
-              <div className="mt-5 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
+              <div className="mt-4 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
                 <div className="flex items-start gap-3">
                   <CheckCircle size={18} className="text-emerald-500 flex-shrink-0 mt-0.5" />
                   <div>
@@ -136,14 +147,14 @@ export default function ContactPage() {
                     <p className="text-xs text-[var(--text-muted)] mt-1 leading-relaxed">
                       We respond to all qualified inquiries within 24 business hours with pricing,
                       sample availability, and lead time confirmation. WhatsApp inquiries are
-                      typically answered within 2–4 hours during working hours.
+                      typically answered within 2 to 4 hours during working hours.
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* WhatsApp CTA */}
-              <a
+              
                 href="https://wa.me/919876543210?text=Hello%20DEY%20GLOBAL%20EXPORTERS%2C%20I%20am%20interested%20in%20your%20raw%20hair%20products."
                 target="_blank"
                 rel="noopener noreferrer"
@@ -160,21 +171,24 @@ export default function ContactPage() {
       </section>
 
       {/* What happens next */}
-      <section className="py-16 bg-[var(--surface)] border-t border-[var(--border)]">
+      <section className="py-20 bg-[var(--surface)] border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10">
-            <SectionHeading title="What Happens After You Submit" align="center" />
+            <SectionHeading
+              title="What Happens After You Submit"
+              align="center"
+            />
           </div>
           <div className="grid sm:grid-cols-3 gap-6 text-center">
             {[
               {
                 step: '01',
-                title: 'Review & Qualify',
+                title: 'Review and Qualify',
                 desc: 'Our team reviews your inquiry and matches your requirements to our available products and current stock.',
               },
               {
                 step: '02',
-                title: 'Price List & Quote',
+                title: 'Price List and Quote',
                 desc: 'We respond within 24 business hours with FOB pricing, quantities, and sample order options.',
               },
               {
