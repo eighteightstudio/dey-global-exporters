@@ -15,12 +15,18 @@ export const metadata: Metadata = {
   },
 }
 
-const contactDetails = [
+interface ContactDetail {
+  icon: React.ElementType
+  label: string
+  lines: string[]
+  href?: string
+}
+
+const contactDetails: ContactDetail[] = [
   {
     icon: MapPin,
     label: 'Office and Warehouse',
     lines: ['East Medinipur, West Bengal', 'India'],
-    href: undefined as string | undefined,
   },
   {
     icon: Phone,
@@ -44,7 +50,6 @@ const contactDetails = [
     icon: Clock,
     label: 'Working Hours',
     lines: ['Mon to Sat: 9:00 AM to 7:00 PM IST', 'IST = UTC+5:30', 'US East overlap: 9 PM to 4 AM ET'],
-    href: undefined as string | undefined,
   },
 ]
 
