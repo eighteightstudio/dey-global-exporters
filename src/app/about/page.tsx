@@ -1,29 +1,29 @@
+// src/app/about/page.tsx
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Check, Users, Target, Heart } from 'lucide-react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { Button } from '@/components/ui/Button'
 import { CtaBanner } from '@/components/sections/CtaBanner'
 
 export const metadata: Metadata = {
-  title: 'About Us — Raw Indian Temple Hair Exporter from Kolkata',
+  title: 'About Us | DEY GLOBAL EXPORTERS',
   description:
-    'Learn about DEY GLOBAL EXPORTERS — our origin story, sourcing philosophy, team, and commitment to ethical temple hair supply from Kolkata, India to global wig and extension brands.',
+    'Learn about DEY GLOBAL EXPORTERS — our origin story, sourcing philosophy, leadership team, and commitment to ethical human hair supply from East Medinipur, West Bengal, India.',
   openGraph: {
-    title: 'About DEY GLOBAL EXPORTERS | Raw Hair Exporter, Kolkata India',
+    title: 'About Us | DEY GLOBAL EXPORTERS',
     description:
-      'Family-built B2B raw hair export business from Kolkata. Ethical temple sourcing, rigorous QC, DGFT-compliant documentation for wig manufacturers worldwide.',
+      'Founded by Sunny Dey with over 10 years of sourcing expertise. Ethical temple and household hair sourcing from India for global wig and extension brands.',
   },
 }
 
 const milestones = [
-  { year: '2022', event: 'DEY GLOBAL EXPORTERS founded in Kolkata, West Bengal' },
-  { year: '2022', event: 'IEC and GSTIN registration completed; first test shipment to the UAE' },
-  { year: '2023', event: 'First US shipment — 20kg raw temple bulk hair to a Dallas wig brand' },
-  { year: '2023', event: 'MSME UDYAM registered; FIEO membership secured' },
-  { year: '2024', event: 'Export reach expanded to 15+ countries across Africa and Europe' },
-  { year: '2024', event: 'Monthly export capacity surpasses 300 kg; wefted bundle line launched' },
-  { year: '2025', event: 'Lace closures and frontals added; 20+ active B2B buyer relationships' },
+  { year: '2015', event: 'Sunny Dey begins hands-on sourcing across Indian temples and households' },
+  { year: '2015–2023', event: 'Nearly a decade supplying established exporters and mastering the full supply chain' },
+  { year: '2023', event: 'DEY GLOBAL EXPORTERS formally established — East Medinipur, West Bengal' },
+  { year: '2023', event: 'IEC and GSTIN registration completed; first direct export shipments initiated' },
+  { year: '2024', event: 'Product range expanded: single drawn, double drawn, white hair, and custom orders' },
+  { year: '2024', event: 'Active B2B buyer relationships established across multiple international markets' },
+  { year: '2025', event: 'Expansion planning underway into additional high-quality export product categories' },
 ]
 
 const values = [
@@ -31,39 +31,39 @@ const values = [
     icon: Heart,
     title: 'Ethical Sourcing, Always',
     description:
-      'We source exclusively through temple tonsure auctions and verified collection networks. Every lot is documented for traceability. We do not purchase from grey-market or unverified sources.',
+      'We source exclusively through temples, verified households, and established grassroots networks across India. Every lot carries full traceability. We do not purchase from grey-market or unverified sources — this is a non-negotiable principle.',
   },
   {
     icon: Target,
-    title: 'Accuracy Over Volume',
+    title: 'Quality Over Everything',
     description:
-      'We would rather ship a smaller, accurately graded lot than a larger, inconsistent one. Every bundle weight, cuticle alignment test, and length measurement matters to us — because it matters to your production line.',
+      'Our founder spent a decade on the ground learning what real quality looks like before building a business around it. We grade meticulously, document accurately, and only ship what we would stand behind personally.',
   },
   {
     icon: Users,
-    title: 'Long-Term Partnership',
+    title: 'Long-Term Partnerships',
     description:
-      'We are not a one-order supplier. We build relationships with B2B buyers who value reliability over novelty. Our repeat customer rate reflects that commitment — the majority of our revenue comes from buyers placing their third order or beyond.',
+      'We are not a one-order supplier. Our goal is to build consistent, trust-based relationships with B2B buyers who value reliability, documentation transparency, and a supplier that understands their production requirements.',
   },
 ]
 
 const team = [
   {
-    name: 'Rahul Dey',
-    role: 'Founder & Managing Director',
-    bio: 'Over 8 years in textile and commodity export from West Bengal. Founded DEY GLOBAL EXPORTERS to bring institutional-grade documentation standards to the raw hair export segment. Manages export licensing, buyer relationships, and strategic growth.',
+    name: 'Sunny Dey',
+    role: 'Founder',
+    bio: 'Over 10 years of hands-on expertise sourcing premium human hair across India — from temples, households, and grassroots networks. Founded DEY GLOBAL EXPORTERS to bring transparency, reliability, and institutional-grade quality directly to global clients.',
     image: 'https://picsum.photos/seed/team1/200/200',
   },
   {
-    name: 'Priya Dey',
-    role: 'Head of Operations & QC',
-    bio: 'Oversees the sorting, grading, and QC process for every outgoing shipment. Background in textile quality management. Personally approves every batch report before dispatch authorization.',
+    name: 'Manashi Dey',
+    role: 'Co-Founder',
+    bio: 'Integral to the operational and strategic foundation of DEY GLOBAL EXPORTERS. Works alongside the founding team to ensure the company delivers on its commitment to quality, consistency, and long-term buyer relationships.',
     image: 'https://picsum.photos/seed/team2/200/200',
   },
   {
-    name: 'Arun Sharma',
-    role: 'Export Documentation & Logistics',
-    bio: 'Handles all DGFT compliance, HS code classification, shipping bill filing, and freight forwarder coordination. Ensures every shipment leaves Kolkata with a complete, accurate documentation set.',
+    name: 'Debayudh Roy',
+    role: 'Office and Social Team',
+    bio: 'Manages day-to-day office operations and buyer-facing communication. Responsible for digital presence, inquiry handling, and ensuring every client interaction reflects the professionalism the company is built on.',
     image: 'https://picsum.photos/seed/team3/200/200',
   },
 ]
@@ -72,18 +72,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-[var(--navy)]">
+      <section className="py-28 bg-[var(--navy)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
             <h1 className="text-4xl md:text-5xl font-bold text-white font-heading leading-tight mb-5">
-              Built on Sourcing Integrity.<br />Grown on Trust.
+              Built on a Decade of<br />Ground-Level Expertise.
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
-              DEY GLOBAL EXPORTERS is a Kolkata-based B2B raw hair export company supplying
-              wig manufacturers, extension brands, and wholesale distributors across 20+ countries.
-              We entered the hair export industry to prove that ethical sourcing, institutional-grade
-              documentation, and genuine quality control can coexist with competitive pricing.
+              DEY GLOBAL EXPORTERS is a West Bengal-based B2B raw human hair export company
+              founded by Sunny Dey after nearly 10 years of sourcing experience across Indian
+              temples, households, and grassroots supply networks. We entered the export market
+              to bring transparency, quality consistency, and long-term trust to global buyers.
             </p>
           </div>
         </div>
@@ -101,30 +101,27 @@ export default function AboutPage() {
               />
               <div className="mt-6 space-y-4 text-[var(--text-muted)] text-sm leading-relaxed">
                 <p>
-                  DEY GLOBAL EXPORTERS was founded in 2022 by Rahul Dey, a Kolkata-based export
-                  professional who spent nearly a decade in the textile and commodity trade before
-                  identifying a consistent gap in the raw hair export market: the absence of suppliers
-                  who combined genuine quality documentation with reliable compliance practices.
+                  Every business has a beginning. Ours began on the ground — where quality is not
+                  promised, but discovered.
                 </p>
                 <p>
-                  The Indian raw hair export industry is dominated by volume — large informal networks
-                  that move significant quantities but offer minimal traceability, inconsistent
-                  documentation, and little recourse for quality disputes. International buyers, especially
-                  in the US and EU, increasingly need more than just hair — they need a supplier who
-                  understands customs documentation, HS code classification, DGFT compliance, and the
-                  paperwork requirements of their import countries.
+                  Back in 2015, Sunny Dey started his journey in the human hair industry — not as an
+                  exporter, but as a source. Traveling across India, he worked closely with temples,
+                  connected with households, and developed a firsthand understanding of where quality
+                  hair truly comes from. What began as simple sourcing evolved into deep supply chain
+                  involvement, supplying established exporters and learning the business from the inside out.
                 </p>
                 <p>
-                  We built DEY GLOBAL EXPORTERS to fill that gap. Starting with small, carefully
-                  documented shipments to UAE and then US buyers, we established our documentation
-                  standards, QC protocols, and sourcing relationships before scaling volume.
-                  That foundation — compliance first, then scale — defines how we operate today.
+                  There were no shortcuts. Only years of observation, trial, and hands-on experience.
+                  That time built something that cannot be replicated: a genuine understanding of quality,
+                  consistency, and trust — alongside a clear view of the gaps and opportunities that
+                  existed within the industry.
                 </p>
                 <p>
-                  Today we export raw temple bulk hair, wefted Remy bundles, lace closures, and
-                  frontals to brands and manufacturers across North America, Europe, Africa, and the
-                  Middle East. The majority of our buyers are on their third order or beyond.
-                  That repeat rate is the only metric that matters to us.
+                  After nearly a decade of building networks and mastering the fundamentals, DEY GLOBAL
+                  EXPORTERS was established to bring that expertise directly to global clients — with
+                  transparency, reliability, and a standard of excellence that reflects everything our
+                  founder learned on the ground.
                 </p>
               </div>
             </div>
@@ -133,29 +130,55 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
                   src="https://picsum.photos/seed/aboutstory/600/750"
-                  alt="DEY GLOBAL EXPORTERS — raw hair sorting and grading facility, Kolkata"
+                  alt="DEY GLOBAL EXPORTERS — human hair sorting and grading facility, West Bengal"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-5 -left-5 bg-[var(--accent)] text-[var(--navy)] rounded-2xl p-5 shadow-xl">
-                <p className="text-3xl font-bold font-heading">2022</p>
-                <p className="text-xs font-semibold mt-0.5">Year Founded</p>
-                <p className="text-xs mt-1">Kolkata, West Bengal</p>
+              <div className="absolute -bottom-5 -left-5 bg-[var(--accent)] text-[var(--navy)] rounded-2xl p-5">
+                <p className="text-3xl font-bold font-heading">2015</p>
+                <p className="text-xs font-semibold mt-0.5">Journey Began</p>
+                <p className="text-xs mt-1">East Medinipur, West Bengal</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
+      {/* Mission + Vision */}
       <section className="py-20 bg-[var(--surface)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white border border-[var(--border)] rounded-2xl p-10">
+              <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
+              <h2 className="text-2xl font-bold text-[var(--navy)] font-heading mb-4">Our Mission</h2>
+              <p className="text-[var(--text-muted)] text-sm leading-relaxed">
+                Deliver consistent quality, build global trust, and create long-term partnerships
+                with buyers who value a supplier that understands their business as well as their
+                own product requirements.
+              </p>
+            </div>
+            <div className="bg-[var(--navy)] border border-[var(--navy)] rounded-2xl p-10">
+              <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
+              <h2 className="text-2xl font-bold text-white font-heading mb-4">Our Vision</h2>
+              <p className="text-white/60 text-sm leading-relaxed">
+                To expand beyond the hair industry and serve international markets with multiple
+                high-quality product categories — carrying the same sourcing discipline and
+                quality commitment across everything we export.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <SectionHeading
               title="Our Core Values"
-              subtitle="The principles that guide every sourcing decision, every QC check, and every shipment."
+              subtitle="The principles that guide every sourcing decision, every quality check, and every shipment."
               align="center"
             />
           </div>
@@ -166,7 +189,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={v.title}
-                  className="bg-white border border-[var(--border)] rounded-2xl p-7"
+                  className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-7"
                 >
                   <div className="w-11 h-11 rounded-xl bg-[var(--navy)] flex items-center justify-center mb-5">
                     <Icon size={20} className="text-[var(--accent)]" />
@@ -183,13 +206,13 @@ export default function AboutPage() {
       </section>
 
       {/* Sourcing */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="relative aspect-video rounded-2xl overflow-hidden lg:aspect-[4/3]">
               <Image
                 src="https://picsum.photos/seed/templesorting/700/530"
-                alt="Temple hair collection and sorting process — ethical raw hair sourcing India"
+                alt="Temple and household hair collection process — ethical raw hair sourcing India"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -204,30 +227,29 @@ export default function AboutPage() {
               />
               <div className="mt-6 space-y-4 text-[var(--text-muted)] text-sm leading-relaxed">
                 <p>
-                  Our primary raw material source is South Indian temple tonsure auctions — principally
-                  the Tirumala Tirupati Devasthanams (TTD) auction system, which sells sorted temple
-                  hair to licensed exporters through public, documented e-auctions.
+                  Our raw material comes from three verified source categories: South Indian temple
+                  tonsure donations, direct household collections, and established grassroots networks
+                  across India built by our founder over nearly a decade of ground-level work.
                 </p>
                 <p>
-                  Temple hair is single-donor — from one individual head — which naturally guarantees
-                  cuticle direction consistency, texture uniformity, and the Remy characteristics that
-                  premium wig brands require. Hair offered at temples is grown for months or years
-                  before donation, resulting in longer lengths and healthier strands than collected
-                  fallout hair.
+                  Temple-sourced hair is single-donor, grown for months or years before donation,
+                  and naturally carries the cuticle alignment and length characteristics that premium
+                  wig brands require. Household and network-sourced material fills demand for our
+                  single-drawn and double-drawn wholesale product lines.
                 </p>
                 <p>
-                  We supplement temple-sourced stock with verified salon collection networks in West
-                  Bengal and Tamil Nadu for our single-drawn wholesale bulk products. All collection
-                  points are visited and vetted by our operations team before onboarding.
+                  Every sourcing point is visited and verified by our team before onboarding.
+                  We do not purchase through informal intermediaries or unverified grey-market
+                  channels. Traceability is documented at the batch level.
                 </p>
               </div>
               <ul className="mt-6 space-y-2">
                 {[
-                  'TTD temple auction certified lots',
-                  'Single-donor guarantees on premium products',
-                  'Zero informal or grey-market sourcing',
-                  'Batch-level traceability documentation',
-                  'Verified salon network for wholesale grade',
+                  'Temple tonsure sourcing — verified donation lots',
+                  'Direct household collection networks',
+                  'Grassroots sourcing across East Medinipur and Tamil Nadu',
+                  'Zero informal or grey-market procurement',
+                  'Batch-level traceability on all outgoing stock',
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-3 text-sm text-[var(--navy)]">
                     <Check size={14} className="text-[var(--accent)] flex-shrink-0" />
@@ -241,12 +263,12 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-[var(--surface)]">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <SectionHeading
               title="Meet the Team"
-              subtitle="The people behind every shipment, every QC check, and every buyer inquiry."
+              subtitle="The people behind every shipment, every quality check, and every buyer relationship."
               align="center"
             />
           </div>
@@ -255,7 +277,7 @@ export default function AboutPage() {
             {team.map((member) => (
               <div
                 key={member.name}
-                className="bg-white border border-[var(--border)] rounded-2xl overflow-hidden"
+                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden"
               >
                 <div className="relative aspect-square">
                   <Image
@@ -276,6 +298,22 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          {/* Workforce note */}
+          <div className="mt-10 bg-[var(--navy)] rounded-2xl px-8 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p className="text-white font-semibold font-heading text-base">Our Workforce</p>
+              <p className="text-white/60 text-sm mt-1">
+                Skilled male and female workers from rural East Medinipur, West Bengal — the backbone
+                of our sorting, grading, and packing operations.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <span className="inline-block bg-[var(--accent)] text-[var(--navy)] text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wide">
+                Local Employment
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -284,8 +322,8 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <SectionHeading
-              title="Company Milestones"
-              subtitle="From first shipment to a 20+ country footprint — in three years."
+              title="Our Journey"
+              subtitle="From ground-level sourcing in 2015 to a global export operation built on a decade of expertise."
               align="center"
               light
             />
