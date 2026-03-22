@@ -23,8 +23,8 @@ export default function ProductsPage() {
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
               We specialize in sourcing and exporting premium quality temple and donor hair.
-              Every product in our catalog is A1 graded, ethically sourced from temples and
-              verified household networks across India, and export-ready with full documentation.
+              Every product is A1 graded, ethically sourced from temples and verified household
+              networks across India, and export-ready with full documentation.
             </p>
           </div>
         </div>
@@ -45,8 +45,8 @@ export default function ProductsPage() {
             <div>
               <p className="font-bold text-[var(--navy)] font-heading mb-2">HS Code: 05010020</p>
               <p className="text-[var(--text-muted)] leading-relaxed">
-                Worked human hair — sorted, drawn, or minimally processed. Covers Single Drawn
-                and Double Drawn Hair. Free export with no FOB minimum.
+                Worked human hair — sorted and drawn. Covers Single Drawn and Double Drawn Hair.
+                Free export with no FOB minimum.
               </p>
             </div>
             <div>
