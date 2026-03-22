@@ -1,3 +1,4 @@
+// src/app/contact/ContactForm.tsx
 "use client"
 
 import { useState } from 'react'
@@ -5,12 +6,11 @@ import { Send, CheckCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const productOptions = [
-  'Bulk Raw Temple Hair',
-  'Wefted Remy Bundles (Double Drawn)',
-  'Wefted Remy Bundles (Single Drawn)',
-  'Lace Closures (4×4 / 5×5)',
-  'Lace Frontals (13×4 / 13×6)',
-  'Specialty Curly / Kinky Textures',
+  'Raw Virgin Hair Ball Combo (A1 Quality)',
+  'White Hair Ball (A1 Quality)',
+  'Single Drawn Hair (A1 Quality)',
+  'Double Drawn Hair (A1 Quality)',
+  'Custom Order',
 ]
 
 const roleOptions = [
@@ -24,29 +24,14 @@ const roleOptions = [
 
 const volumeOptions = [
   'Under 5 kg / month',
-  '5–20 kg / month',
-  '20–50 kg / month',
-  '50–100 kg / month',
+  '5 to 20 kg / month',
+  '20 to 50 kg / month',
+  '50 to 100 kg / month',
   '100 kg+ / month',
   'One-time order',
 ]
 
-interface FormState {
-  firstName: string
-  lastName: string
-  company: string
-  website: string
-  role: string
-  country: string
-  city: string
-  whatsapp: string
-  email: string
-  products: string[]
-  volume: string
-  message: string
-}
-
-const initialState: FormState = {
+const initialState = {
   firstName: '',
   lastName: '',
   company: '',
@@ -56,13 +41,13 @@ const initialState: FormState = {
   city: '',
   whatsapp: '',
   email: '',
-  products: [],
+  products: [] as string[],
   volume: '',
   message: '',
 }
 
 export function ContactForm() {
-  const [form, setForm] = useState<FormState>(initialState)
+  const [form, setForm] = useState(initialState)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -83,7 +68,6 @@ export function ContactForm() {
   function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
     setLoading(true)
-    // Simulate submission — no backend per spec
     setTimeout(() => {
       setLoading(false)
       setSubmitted(true)
@@ -98,13 +82,13 @@ export function ContactForm() {
         </div>
         <h3 className="font-bold text-[var(--navy)] font-heading text-xl">Inquiry Received</h3>
         <p className="text-[var(--text-muted)] text-sm max-w-sm leading-relaxed">
-          Thank you for reaching out. Our export team will review your requirements and respond
-          within 24 business hours with pricing and availability.
+          Thank you for reaching out. Sunny Dey and the team will review your requirements
+          and respond within 24 business hours with pricing and availability.
         </p>
         <p className="text-xs text-[var(--text-muted)]">
           For faster response, WhatsApp us at{' '}
-          <a href="https://wa.me/919876543210" className="text-[var(--navy)] font-medium underline">
-            +91 98765 43210
+          <a href="https://wa.me/917003455085" className="text-[var(--navy)] font-medium underline">
+            +91 70034 55085
           </a>
         </p>
         <button
@@ -117,14 +101,12 @@ export function ContactForm() {
     )
   }
 
-  const inputClass =
-    'w-full border border-[var(--border)] rounded-lg px-4 py-2.5 text-sm text-[var(--navy)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all duration-150 bg-white'
+  const inputClass = 'w-full border border-[var(--border)] rounded-lg px-4 py-2.5 text-sm text-[var(--navy)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all duration-150 bg-white'
 
   const labelClass = 'block text-xs font-semibold text-[var(--navy)] uppercase tracking-wide mb-1.5'
 
   return (
     <div className="flex flex-col gap-5">
-      {/* Name row */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className={labelClass}>First Name *</label>
@@ -150,7 +132,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* Company + Website */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className={labelClass}>Company Name *</label>
@@ -169,13 +150,12 @@ export function ContactForm() {
             name="website"
             value={form.website}
             onChange={handleChange}
-            placeholder="https://luxewig.com"
+            placeholder="https://yourcompany.com"
             className={inputClass}
           />
         </div>
       </div>
 
-      {/* Role */}
       <div>
         <label className={labelClass}>Your Role *</label>
         <select
@@ -185,14 +165,13 @@ export function ContactForm() {
           className={inputClass}
           required
         >
-          <option value="">Select your role…</option>
+          <option value="">Select your role</option>
           {roleOptions.map((r) => (
             <option key={r} value={r}>{r}</option>
           ))}
         </select>
       </div>
 
-      {/* Country + City */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className={labelClass}>Country *</label>
@@ -217,7 +196,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* WhatsApp + Email */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className={labelClass}>WhatsApp Number *</label>
@@ -237,14 +215,13 @@ export function ContactForm() {
             type="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="sarah@luxewig.com"
+            placeholder="sarah@yourcompany.com"
             className={inputClass}
             required
           />
         </div>
       </div>
 
-      {/* Product interest */}
       <div>
         <label className={labelClass}>Product Interest (select all that apply) *</label>
         <div className="flex flex-wrap gap-2 mt-1">
@@ -269,7 +246,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* Volume */}
       <div>
         <label className={labelClass}>Approximate Monthly Requirement *</label>
         <select
@@ -279,27 +255,25 @@ export function ContactForm() {
           className={inputClass}
           required
         >
-          <option value="">Select volume bracket…</option>
+          <option value="">Select volume bracket</option>
           {volumeOptions.map((v) => (
             <option key={v} value={v}>{v}</option>
           ))}
         </select>
       </div>
 
-      {/* Message */}
       <div>
         <label className={labelClass}>Additional Details / Message</label>
         <textarea
           name="message"
           value={form.message}
           onChange={handleChange}
-          placeholder="Tell us about specific textures, lengths, color preferences, lead time requirements, or any other details that will help us prepare an accurate quote..."
+          placeholder="Tell us about specific textures, lengths, lead time requirements, or any other details that will help us prepare an accurate quote."
           rows={4}
           className={cn(inputClass, 'resize-none')}
         />
       </div>
 
-      {/* Submit */}
       <button
         onClick={handleSubmit}
         disabled={loading || !form.firstName || !form.email || !form.company || !form.whatsapp || form.products.length === 0}
@@ -311,7 +285,7 @@ export function ContactForm() {
         {loading ? (
           <>
             <span className="w-4 h-4 border-2 border-[var(--navy)]/30 border-t-[var(--navy)] rounded-full animate-spin" />
-            Sending Inquiry…
+            Sending Inquiry
           </>
         ) : (
           <>
