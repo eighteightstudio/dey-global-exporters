@@ -34,15 +34,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 function renderMarkdown(content: string): string {
   return content
     .trim()
-    // H1
     .replace(/^# (.+)$/gm, '<h1 class="text-3xl md:text-4xl font-bold text-[var(--navy)] font-heading mt-10 mb-4 leading-tight">$1</h1>')
-    // H2
     .replace(/^## (.+)$/gm, '<h2 class="text-xl md:text-2xl font-bold text-[var(--navy)] font-heading mt-10 mb-3 leading-tight">$1</h2>')
-    // H3
     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold text-[var(--navy)] font-heading mt-7 mb-2">$1</h3>')
-    // Bold
     .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-[var(--navy)]">$1</strong>')
-    // Tables (simple detection)
     .replace(/(\|.+\|\n)+/g, (table) => {
       const rows = table.trim().split('\n').filter((r) => !r.match(/^\|[-|:\s]+\|$/))
       const html = rows.map((row, i) => {
@@ -55,23 +50,19 @@ function renderMarkdown(content: string): string {
       })
       return `<div class="overflow-x-auto my-6 rounded-xl border border-[var(--border)]"><table class="w-full">${html.join('')}</table></div>`
     })
-    // Unordered lists
     .replace(/(^- .+\n?)+/gm, (block) => {
       const items = block.trim().split('\n').map((l) =>
         `<li class="flex gap-2 text-sm text-[var(--text-muted)] leading-relaxed"><span class="text-[var(--accent)] mt-1 flex-shrink-0">●</span><span>${l.replace(/^- /, '')}</span></li>`
       ).join('')
       return `<ul class="space-y-2 my-4">${items}</ul>`
     })
-    // Ordered lists
     .replace(/(^\d+\. .+\n?)+/gm, (block) => {
       const items = block.trim().split('\n').map((l, i) =>
         `<li class="flex gap-3 text-sm text-[var(--text-muted)] leading-relaxed"><span class="font-bold text-[var(--navy)] flex-shrink-0 w-5">${i + 1}.</span><span>${l.replace(/^\d+\. /, '')}</span></li>`
       ).join('')
       return `<ol class="space-y-2 my-4">${items}</ol>`
     })
-    // Blockquote
     .replace(/^> (.+)$/gm, '<blockquote class="border-l-4 border-[var(--accent)] pl-4 py-1 my-4 text-sm text-[var(--text-muted)] italic">$1</blockquote>')
-    // Paragraphs (lines not already wrapped)
     .replace(/^(?!<[a-z]).+$/gm, (line) => {
       if (line.trim() === '') return ''
       return `<p class="text-sm md:text-base text-[var(--text-muted)] leading-relaxed my-3">${line}</p>`
@@ -111,23 +102,21 @@ export default function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      {/* Hero image */}
-      <div className="relative h-72 md:h-96 bg-[var(--navy)] overflow-hidden">
+      <div className="relative h-72 md:h-[420px] bg-[var(--navy)] overflow-hidden">
         <Image
           src={post.image}
           alt={post.title}
           fill
           priority
-          className="object-cover opacity-50"
+          quality={90}
+          className="object-cover opacity-70"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)] via-[var(--navy)]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/80 via-[var(--navy)]/40 to-transparent" />
       </div>
 
-      {/* Article content */}
       <div className="bg-white">
         <div className="max-w-3xl mx-auto px-6 py-12">
-          {/* Back link */}
           <Link
             href="/blog"
             className="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--navy)] transition-colors mb-8"
@@ -136,7 +125,6 @@ export default function BlogArticlePage({ params }: PageProps) {
             Back to Blog
           </Link>
 
-          {/* Meta */}
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <Badge variant="navy">{post.category}</Badge>
             <span className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
@@ -149,17 +137,14 @@ export default function BlogArticlePage({ params }: PageProps) {
             </span>
           </div>
 
-          {/* Title */}
           <h1 className="text-3xl md:text-4xl font-bold text-[var(--navy)] font-heading leading-tight mb-4">
             {post.title}
           </h1>
 
-          {/* Excerpt */}
           <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 border-l-4 border-[var(--accent)] pl-4">
             {post.excerpt}
           </p>
 
-          {/* Author */}
           <div className="flex items-center gap-3 py-4 border-y border-[var(--border)] mb-8">
             <div className="w-9 h-9 rounded-full bg-[var(--navy)] flex items-center justify-center text-white font-bold text-sm font-heading">
               D
@@ -170,13 +155,11 @@ export default function BlogArticlePage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* Article body */}
           <div
             className="prose-custom"
             dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content) }}
           />
 
-          {/* Tags */}
           <div className="mt-10 pt-6 border-t border-[var(--border)]">
             <div className="flex flex-wrap items-center gap-2">
               <Tag size={14} className="text-[var(--text-muted)]" />
@@ -186,7 +169,6 @@ export default function BlogArticlePage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* CTA */}
           <div className="mt-10 bg-[var(--navy)] rounded-2xl p-7 text-center">
             <p className="text-white font-bold font-heading text-xl mb-2">
               Need a Reliable Raw Hair Supplier?
@@ -195,13 +177,12 @@ export default function BlogArticlePage({ params }: PageProps) {
               Contact DEY GLOBAL EXPORTERS for pricing, sample requests, and export documentation.
             </p>
             <Button variant="accent" size="md" href="/contact">
-              Request a Price List →
+              Request a Price List
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Related posts */}
       {related.length > 0 && (
         <section className="py-16 bg-[var(--surface)] border-t border-[var(--border)]">
           <div className="max-w-7xl mx-auto px-6">
