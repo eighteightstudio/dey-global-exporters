@@ -47,6 +47,7 @@ export function WhyIndianHair() {
                 src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/why_indian_hair_section.png"
                 alt="South Indian temple hair sorting — raw human hair quality inspection India"
                 fill
+                quality={90}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -65,7 +66,6 @@ export function WhyIndianHair() {
               subtitle="India's unique temple sourcing ecosystem makes it the world's dominant raw hair origin — and the preferred input for premium wig and extension brands globally."
               align="left"
             />
-
             <ul className="mt-8 flex flex-col gap-5">
               {advantages.map((item) => (
                 <li key={item.title} className="flex gap-4">
@@ -81,7 +81,6 @@ export function WhyIndianHair() {
                 </li>
               ))}
             </ul>
-
             <div className="mt-8">
               <Button variant="primary" size="md" href="/about">
                 Our Sourcing Story
