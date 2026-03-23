@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react'
 
 const companyLinks = [
@@ -18,13 +19,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
           <div>
-            <Link href="/" className="flex flex-col leading-none mb-4">
-              <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', letterSpacing: '0.05em', color: '#ffffff' }}>
-                DEY GLOBAL EXPORTERS
-              </span>
-              <span style={{ fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginTop: '2px' }}>
-                Raw Hair Exporters, India
-              </span>
+            <Link href="/" className="inline-flex mb-4">
+              <Image
+                src="/DEY_GLOBAL_LOGO.png"
+                alt="DEY GLOBAL EXPORTERS Logo"
+                width={160}
+                height={48}
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <div className="flex flex-wrap gap-1.5 mb-4">
               <span className="text-[10px] font-medium text-white/60 border border-white/20 rounded-full px-2.5 py-0.5">IEC Registered</span>
