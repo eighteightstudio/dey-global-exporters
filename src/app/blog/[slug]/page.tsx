@@ -98,15 +98,18 @@ export default function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="w-full bg-[var(--navy)]" style={{ height: '420px', position: 'relative', overflow: 'hidden' }}>
-        <Image
+      <div className="relative w-full bg-[var(--navy)]" style={{ height: '420px', overflow: 'hidden' }}>
+        <img
           src={post.image}
           alt={post.title}
-          fill
-          priority
-          quality={90}
-          sizes="100vw"
-          style={{ objectFit: 'cover', opacity: 0.75 }}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: 0.75,
+          }}
         />
         <div
           style={{
