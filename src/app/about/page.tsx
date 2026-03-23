@@ -129,7 +129,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/why_indian_hair_section.png"
+                  src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/our_story_section.png"
                   alt="DEY GLOBAL EXPORTERS — human hair sorting and grading facility, West Bengal"
                   fill
                   className="object-cover"
