@@ -8,7 +8,7 @@ export function HeroSection() {
     <section className="relative bg-[var(--navy)] overflow-hidden min-h-[88vh] flex items-center py-28">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/home_page_hero_section.png.png"
+          src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/home_page_hero_section.png"
           alt="Raw Indian temple hair export facility — DEY GLOBAL EXPORTERS Kolkata"
           fill
           priority
