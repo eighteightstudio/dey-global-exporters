@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react'
 
 const companyLinks = [
@@ -18,9 +19,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
           <div>
-            <p className="font-bold text-white text-lg font-heading tracking-wide mb-1">
-              DEY GLOBAL EXPORTERS
-            </p>
+            <Link href="/" className="inline-flex items-center mb-4">
+              <Image
+                src="/DEY_GLOBAL_LOGO.png"
+                alt="DEY GLOBAL EXPORTERS — Raw Hair Exporter India"
+                width={150}
+                height={44}
+                className="h-9 w-auto object-contain brightness-0 invert"
+              />
+            </Link>
             <p className="text-white/50 text-xs mb-4 uppercase tracking-widest">
               Raw Human Hair Exporter, India
             </p>
