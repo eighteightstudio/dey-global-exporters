@@ -19,14 +19,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug)
   if (!post) return { title: 'Article Not Found' }
-
   return {
     title: post.title,
     description: post.excerpt,
     openGraph: {
       title: `${post.title} | DEY GLOBAL EXPORTERS Blog`,
       description: post.excerpt,
-      images: [{ url: post.image, width: 800, height: 450 }],
+      images: [{ url: post.image, width: 1200, height: 630 }],
     },
   }
 }
@@ -84,10 +83,7 @@ export default function BlogArticlePage({ params }: PageProps) {
     description: post.excerpt,
     image: post.image,
     datePublished: post.date,
-    author: {
-      '@type': 'Organization',
-      name: 'DEY GLOBAL EXPORTERS',
-    },
+    author: { '@type': 'Organization', name: 'DEY GLOBAL EXPORTERS' },
     publisher: {
       '@type': 'Organization',
       name: 'DEY GLOBAL EXPORTERS',
@@ -102,17 +98,23 @@ export default function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="relative h-72 md:h-[420px] bg-[var(--navy)] overflow-hidden">
+      <div className="w-full bg-[var(--navy)]" style={{ height: '420px', position: 'relative', overflow: 'hidden' }}>
         <Image
           src={post.image}
           alt={post.title}
           fill
           priority
           quality={90}
-          className="object-cover opacity-70"
           sizes="100vw"
+          style={{ objectFit: 'cover', opacity: 0.75 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/80 via-[var(--navy)]/40 to-transparent" />
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to top, rgba(10,22,40,0.85) 0%, rgba(10,22,40,0.3) 50%, transparent 100%)',
+          }}
+        />
       </div>
 
       <div className="bg-white">
