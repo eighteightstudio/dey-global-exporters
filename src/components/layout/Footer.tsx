@@ -23,9 +23,10 @@ export function Footer() {
               <Image
                 src="/DEY_GLOBAL_LOGO.png"
                 alt="DEY GLOBAL EXPORTERS"
-                width={220}
-                height={64}
-                className="h-14 w-auto object-contain brightness-0 invert"
+                width={140}
+                height={40}
+                style={{ height: '40px', width: 'auto' }}
+                className="brightness-0 invert"
               />
             </Link>
             <div className="flex flex-wrap gap-1.5 mb-4">
