@@ -8,48 +8,48 @@ import { Button } from '@/components/ui/Button'
 
 const products = [
   {
-    id: 'raw-virgin-hair-ball-combo',
-    badge: 'Best Seller',
-    category: 'Raw Bulk Hair',
-    name: 'Raw Virgin Hair Ball Combo',
+    id: 'raw-indian-temple-hair-bulk',
+    badge: 'Temple-Sourced',
+    category: 'Bulk Raw Hair',
+    name: 'Raw Indian Temple Hair — Bulk Unprocessed',
     grade: 'A1 Quality',
-    image: 'https://picsum.photos/seed/hair1/600/480',
-    alt: 'Raw Virgin Hair Ball Combo A1 — temple sourced bulk hair India',
-    description: 'Unprocessed raw virgin hair sourced directly from temples and verified household networks. Natural cuticle alignment intact, no chemical treatment of any kind.',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_blackball.png',
+    alt: 'Raw Indian Temple Hair Bulk Unprocessed — A1 quality single donor hair India',
+    description: 'Single-donor, cuticle-intact raw temple hair. Collected from South Indian temple donations, sorted by length, cleaned and packed with zero chemical treatment.',
     highlights: [
-      'Available in 50 kg sacks',
-      'Mixed sizes, untangled',
-      'Sourced from temples and households',
+      'Single-donor temple sourced',
+      'Zero chemical treatment',
+      'Cuticle-aligned, fully intact Remy',
     ],
   },
   {
-    id: 'white-hair-ball',
-    badge: 'Premium',
-    category: 'Raw Bulk Hair',
-    name: 'White Hair Ball',
+    id: 'wefted-remy-bundles-double-drawn',
+    badge: 'Double Drawn',
+    category: 'Wefted Bundles',
+    name: 'Wefted Remy Bundles — Double Drawn',
     grade: 'A1 Quality',
-    image: 'https://picsum.photos/seed/hair2/600/480',
-    alt: 'White Hair Ball A1 — paka chul natural white hair India',
-    description: 'Premium natural white hair known as "paka chul". Same ethical temple and household sourcing as our virgin hair. High demand globally for white and grey wig production.',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_whiteball.png',
+    alt: 'Wefted Remy Bundles Double Drawn Natural Black — wholesale export India',
+    description: 'Machine-wefted double-drawn bundles from cuticle-aligned Remy hair. Uniform thickness root to tip — the preferred input for US and European extension brands.',
     highlights: [
-      'Premium "paka chul" natural white hair',
-      'Same A1 sourcing quality as virgin hair',
-      'Temple and household sourced',
+      'Uniform length root to tip',
+      'Machine weft, hand-inspected',
+      'Length: 12 inch to 30 inch',
     ],
   },
   {
-    id: 'single-drawn-hair',
-    badge: null,
-    category: 'Drawn Hair',
-    name: 'Single Drawn Hair',
+    id: 'single-drawn-remy-bundles',
+    badge: 'Wholesale',
+    category: 'Wefted Bundles',
+    name: 'Single Drawn Remy Bundles — Wholesale',
     grade: 'A1 Quality',
-    image: 'https://picsum.photos/seed/hair3/600/480',
-    alt: 'Single Drawn Hair A1 — 12 to 42 inch wholesale export India',
-    description: 'Natural mix of lengths within each bundle for full, voluminous output. Sourced from verified donor networks across India. Competitive wholesale FOB pricing.',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_single_drawn.png',
+    alt: 'Single Drawn Remy Bundles wholesale — bulk volume export India',
+    description: 'High-volume single-drawn Remy bundles for distributors and large-format manufacturers. Natural mix of lengths, competitive FOB pricing, tiered discounts from 50kg.',
     highlights: [
-      'Length: 12 inch to 42 inch',
-      'Natural volume and fullness',
-      'Verified donor network sourced',
+      'Length: 10 inch to 28 inch',
+      'Volume pricing from 50 kg',
+      'Light wash only, no dye or bleach',
     ],
   },
 ]
@@ -74,6 +74,7 @@ export function ProductGrid() {
                   src={product.image}
                   alt={product.alt}
                   fill
+                  quality={90}
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
