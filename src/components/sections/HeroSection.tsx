@@ -12,10 +12,10 @@ export function HeroSection() {
           alt="Raw Indian temple hair export facility — DEY GLOBAL EXPORTERS Kolkata"
           fill
           priority
-          className="object-cover opacity-20"
+          className="object-cover opacity-50"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--navy)] via-[var(--navy)]/90 to-[var(--navy-muted)]/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--navy)]/80 via-[var(--navy)]/60 to-[var(--navy-muted)]/50" />
       </div>
 
       <div
