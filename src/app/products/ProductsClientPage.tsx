@@ -13,7 +13,7 @@ export function ProductsClientPage() {
           <div className="border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col">
             <div className="relative aspect-[4/3]">
               <Image
-                src="https://picsum.photos/seed/hair1/600/480"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_blackball.png"
                 alt="Raw Virgin Hair Ball Combo A1 Quality — temple sourced bulk hair India"
                 fill
                 className="object-cover"
@@ -64,7 +64,7 @@ export function ProductsClientPage() {
           <div className="border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col">
             <div className="relative aspect-[4/3]">
               <Image
-                src="https://picsum.photos/seed/hair2/600/480"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_whiteball.png"
                 alt="White Hair Ball A1 Quality — paka chul premium natural white hair India"
                 fill
                 className="object-cover"
@@ -115,7 +115,7 @@ export function ProductsClientPage() {
           <div className="border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col">
             <div className="relative aspect-[4/3]">
               <Image
-                src="https://picsum.photos/seed/hair3/600/480"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_single_drawn.png"
                 alt="Single Drawn Hair A1 Quality — 12 to 42 inch wholesale export India"
                 fill
                 className="object-cover"
@@ -163,7 +163,7 @@ export function ProductsClientPage() {
           <div className="border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col">
             <div className="relative aspect-[4/3]">
               <Image
-                src="https://picsum.photos/seed/hair4/600/480"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_double%20drawn.png"
                 alt="Double Drawn Hair A1 Quality — 12 to 42 inch premium uniform hair India"
                 fill
                 className="object-cover"
@@ -214,7 +214,7 @@ export function ProductsClientPage() {
           <div className="border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col md:col-span-2 lg:col-span-2">
             <div className="relative aspect-[4/3] lg:aspect-[16/6]">
               <Image
-                src="https://picsum.photos/seed/hair-custom/600/480"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_custom_ordr.png"
                 alt="Custom hair order on demand — DEY GLOBAL EXPORTERS India"
                 fill
                 className="object-cover"
