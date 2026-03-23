@@ -12,6 +12,7 @@ export function HeroSection() {
           alt="Raw Indian temple hair export facility — DEY GLOBAL EXPORTERS Kolkata"
           fill
           priority
+          quality={100}
           className="object-cover opacity-50"
           sizes="100vw"
         />
