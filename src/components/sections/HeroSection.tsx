@@ -1,18 +1,17 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowRight, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[var(--navy)] overflow-hidden min-h-[88vh] flex items-center py-28">
+    <section className="relative bg-[var(--navy)] overflow-hidden min-h-[88vh] flex items-center pt-16 pb-24 md:py-28">
       <div className="absolute inset-0 z-0">
         <Image
           src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/home_page_hero_section.png"
           alt="Raw Indian temple hair export facility — DEY GLOBAL EXPORTERS Kolkata"
           fill
           priority
-          quality={100}
+          quality={90}
           className="object-cover opacity-50"
           sizes="100vw"
         />
@@ -24,7 +23,7 @@ export function HeroSection() {
         style={{
           backgroundImage:
             'linear-gradient(var(--white) 1px, transparent 1px), linear-gradient(90deg, var(--white) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
+          backgroundSize: '96px 96px',
         }}
       />
 
@@ -43,8 +42,7 @@ export function HeroSection() {
 
           <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-2xl opacity-0-initial animate-fade-up delay-200">
             Ethically sourced. Precisely graded. Export-ready from India.
-            Founded by Sunny Dey with over 10 years of sourcing expertise — supplying wig
-            manufacturers, extension brands, and wholesale distributors worldwide.
+            Temple and household sourced — supplying wig brands and distributors worldwide.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-14 opacity-0-initial animate-fade-up delay-300">
