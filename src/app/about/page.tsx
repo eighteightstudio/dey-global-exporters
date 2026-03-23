@@ -211,7 +211,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="relative aspect-video rounded-2xl overflow-hidden lg:aspect-[4/3]">
               <Image
-                src="https://picsum.photos/seed/templesorting/700/530"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/our_sourcing_philosophy.png"
                 alt="Temple and household hair collection process — ethical raw hair sourcing India"
                 fill
                 className="object-cover"
