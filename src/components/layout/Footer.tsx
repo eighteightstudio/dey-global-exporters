@@ -22,10 +22,10 @@ export function Footer() {
             <Link href="/" className="inline-flex mb-4">
               <Image
                 src="/DEY_GLOBAL_LOGO.png"
-                alt="DEY GLOBAL EXPORTERS Logo"
-                width={160}
-                height={48}
-                className="h-10 w-auto object-contain brightness-0 invert"
+                alt="DEY GLOBAL EXPORTERS"
+                width={220}
+                height={64}
+                className="h-14 w-auto object-contain brightness-0 invert"
               />
             </Link>
             <div className="flex flex-wrap gap-1.5 mb-4">
