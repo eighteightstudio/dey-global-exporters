@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
@@ -24,13 +25,15 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
 
-          <Link href="/" onClick={() => setMobileOpen(false)} className="flex flex-col leading-none">
-            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', letterSpacing: '0.05em', color: 'var(--navy)' }}>
-              DEY GLOBAL EXPORTERS
-            </span>
-            <span style={{ fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: '2px' }}>
-              Raw Hair Exporters, India
-            </span>
+          <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center">
+            <Image
+              src="/DEY_GLOBAL_LOGO.png"
+              alt="DEY GLOBAL EXPORTERS Logo"
+              width={160}
+              height={48}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
