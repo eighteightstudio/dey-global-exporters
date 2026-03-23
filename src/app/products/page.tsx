@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { ProductsClientPage } from './ProductsClientPage'
 import { CtaBanner } from '@/components/sections/CtaBanner'
 
