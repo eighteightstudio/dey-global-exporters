@@ -44,7 +44,7 @@ export function WhyIndianHair() {
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
-                src="https://picsum.photos/seed/whyindia/600/750"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/why_indian_hair_section.png"
                 alt="South Indian temple hair sorting — raw human hair quality inspection India"
                 fill
                 className="object-cover"
