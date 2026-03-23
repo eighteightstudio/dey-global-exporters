@@ -23,15 +23,15 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--border)]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
 
-          <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center">
+          <Link href="/" onClick={() => setMobileOpen(false)}>
             <Image
               src="/DEY_GLOBAL_LOGO.png"
               alt="DEY GLOBAL EXPORTERS"
-              width={220}
-              height={64}
-              className="h-14 w-auto object-contain"
+              width={140}
+              height={40}
+              style={{ height: '40px', width: 'auto' }}
               priority
             />
           </Link>
