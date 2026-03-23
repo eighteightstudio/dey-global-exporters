@@ -1,4 +1,3 @@
-// src/app/about/page.tsx
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Check, Users, Target, Heart } from 'lucide-react'
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
 
 const milestones = [
   { year: '2015', event: 'Sunny Dey begins hands-on sourcing across Indian temples and households' },
-  { year: '2015–2023', event: 'Nearly a decade supplying established exporters and mastering the full supply chain' },
+  { year: '2015 to 2023', event: 'Nearly a decade supplying established exporters and mastering the full supply chain' },
   { year: '2023', event: 'DEY GLOBAL EXPORTERS formally established — East Medinipur, West Bengal' },
   { year: '2023', event: 'IEC and GSTIN registration completed; first direct export shipments initiated' },
   { year: '2024', event: 'Product range expanded: single drawn, double drawn, white hair, and custom orders' },
@@ -71,13 +70,12 @@ const team = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
       <section className="py-28 bg-[var(--navy)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="w-10 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
             <h1 className="text-4xl md:text-5xl font-bold text-white font-heading leading-tight mb-5">
-              Built on a Decade of<br />Ground-Level Expertise.
+              Built on a Decade of Ground-Level Expertise.
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
               DEY GLOBAL EXPORTERS is a West Bengal-based B2B raw human hair export company
@@ -89,16 +87,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Story + Image */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
-              <SectionHeading
-                title="Our Story"
-                subtitle=""
-                align="left"
-              />
+              <SectionHeading title="Our Story" subtitle="" align="left" />
               <div className="mt-6 space-y-4 text-[var(--text-muted)] text-sm leading-relaxed">
                 <p>
                   Every business has a beginning. Ours began on the ground — where quality is not
@@ -132,6 +125,7 @@ export default function AboutPage() {
                   src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/our_story_section.png"
                   alt="DEY GLOBAL EXPORTERS — human hair sorting and grading facility, West Bengal"
                   fill
+                  quality={90}
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
@@ -146,7 +140,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission + Vision */}
       <section className="py-20 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
@@ -172,7 +165,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -182,21 +174,15 @@ export default function AboutPage() {
               align="center"
             />
           </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             {values.map((v) => {
               const Icon = v.icon
               return (
-                <div
-                  key={v.title}
-                  className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-7"
-                >
+                <div key={v.title} className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-7">
                   <div className="w-11 h-11 rounded-xl bg-[var(--navy)] flex items-center justify-center mb-5">
                     <Icon size={20} className="text-[var(--accent)]" />
                   </div>
-                  <h3 className="font-bold text-[var(--navy)] font-heading text-lg mb-3">
-                    {v.title}
-                  </h3>
+                  <h3 className="font-bold text-[var(--navy)] font-heading text-lg mb-3">{v.title}</h3>
                   <p className="text-sm text-[var(--text-muted)] leading-relaxed">{v.description}</p>
                 </div>
               )
@@ -205,7 +191,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Sourcing */}
       <section className="py-20 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -214,17 +199,13 @@ export default function AboutPage() {
                 src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/our_sourcing_philosophy.png"
                 alt="Temple and household hair collection process — ethical raw hair sourcing India"
                 fill
+                quality={90}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-
             <div>
-              <SectionHeading
-                title="Sourcing Philosophy"
-                subtitle=""
-                align="left"
-              />
+              <SectionHeading title="Sourcing Philosophy" subtitle="" align="left" />
               <div className="mt-6 space-y-4 text-[var(--text-muted)] text-sm leading-relaxed">
                 <p>
                   Our raw material comes from three verified source categories: South Indian temple
@@ -262,7 +243,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -272,18 +252,15 @@ export default function AboutPage() {
               align="center"
             />
           </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             {team.map((member) => (
-              <div
-                key={member.name}
-                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden"
-              >
+              <div key={member.name} className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden">
                 <div className="relative aspect-square">
                   <Image
                     src={member.image}
                     alt={`${member.name} — ${member.role} at DEY GLOBAL EXPORTERS`}
                     fill
+                    quality={90}
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
@@ -299,7 +276,6 @@ export default function AboutPage() {
             ))}
           </div>
 
-          {/* Workforce note */}
           <div className="mt-10 bg-[var(--navy)] rounded-2xl px-8 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="text-white font-semibold font-heading text-base">Our Workforce</p>
@@ -317,7 +293,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones */}
       <section className="py-20 bg-[var(--navy)]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -328,7 +303,6 @@ export default function AboutPage() {
               light
             />
           </div>
-
           <div className="relative">
             <div className="absolute left-[60px] top-0 bottom-0 w-px bg-white/10" />
             <div className="flex flex-col gap-8">
