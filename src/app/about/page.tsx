@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Check, Users, Target, Heart } from 'lucide-react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { CtaBanner } from '@/components/sections/CtaBanner'
-import { GalleryCarousel } from '@/components/ui/GalleryCarousel'
 
 export const metadata: Metadata = {
   title: 'About Us | DEY GLOBAL EXPORTERS',
@@ -119,6 +118,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
@@ -190,8 +190,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <GalleryCarousel />
 
       <section className="py-20 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-6">
@@ -277,6 +275,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
           <div className="mt-10 bg-[var(--navy)] rounded-2xl px-8 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="text-white font-semibold font-heading text-base">Our Workforce</p>
