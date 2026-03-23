@@ -7,11 +7,11 @@ import { CtaBanner } from '@/components/sections/CtaBanner'
 import { blogPosts } from '@/data/blogPosts'
 
 export const metadata: Metadata = {
-  title: 'Blog — Raw Hair Export Guides & Industry Insights',
+  title: 'Blogs | Raw Hair Export Guides & Industry Insights',
   description:
     'Educational articles for wig manufacturers and hair extension brands: HS code guides, Remy vs non-Remy explained, temple hair sourcing, India export compliance, shipping lead times, and more.',
   openGraph: {
-    title: 'Raw Hair Export Blog | DEY GLOBAL EXPORTERS India',
+    title: 'Blogs | DEY GLOBAL EXPORTERS India',
     description:
       'Industry guides for B2B buyers: temple hair identification, HS 0501 compliance, import lead times, and sourcing best practices from Kolkata, India.',
   },
