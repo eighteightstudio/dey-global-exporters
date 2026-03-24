@@ -178,7 +178,7 @@ export default function BlogArticlePage({ params }: PageProps) {
         </div>
       </div>
 
-      {related.length > 0 && (
+           {related.length > 0 && (
         <section className="py-16 bg-[var(--surface)] border-t border-[var(--border)]">
           <div className="max-w-7xl mx-auto px-6">
             <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-6">
@@ -194,3 +194,4 @@ export default function BlogArticlePage({ params }: PageProps) {
       )}
     </>
   )
+}
