@@ -64,7 +64,7 @@ export const products: Product[] = [
     slug: 'wefted-remy-hair-bundles-double-drawn',
     name: 'Wefted Remy Bundles — Double Drawn Natural Black',
     category: 'Wefted Bundles',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_whiteball.png',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/Product%20Page%20Files/product_raw_whiteball.png',
     badge: 'Double Drawn',
     tagline: 'Uniform length, thick from root to tip — the gold standard for extension brands.',
     description:
@@ -98,7 +98,7 @@ export const products: Product[] = [
     slug: 'lace-closures-4x4-5x5-raw-indian',
     name: 'Lace Closures — 4×4 & 5×5 Raw Indian Hair',
     category: 'Closures',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_single_drawn.png',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/Product%20Page%20Files/product_single_drawn.png',
     badge: 'Swiss Lace',
     tagline: 'Undetectable hairlines. Raw Indian hair hand-tied on Swiss lace.',
     description:
@@ -132,7 +132,7 @@ export const products: Product[] = [
     slug: 'lace-frontals-13x4-13x6-raw-indian',
     name: 'Lace Frontals — 13×4 & 13×6 Ear-to-Ear',
     category: 'Frontals',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_double%20drawn.png',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/Product%20Page%20Files/product_double%20drawn.png',
     badge: 'Ear-to-Ear',
     tagline: 'Full hairline coverage. Raw Indian hair on premium Swiss lace.',
     description:
@@ -166,7 +166,7 @@ export const products: Product[] = [
     slug: 'specialty-curly-kinky-raw-indian-hair',
     name: 'Specialty Textures — Kinky & Curly Raw Indian Hair',
     category: 'Specialty',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_custom_ordr.png',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/Product%20Page%20Files/product_custom_ordr.png',
     badge: 'Specialty',
     tagline: 'Natural curl patterns from the source. No perming, no chemicals.',
     description:
