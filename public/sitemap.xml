@@ -1,79 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
   <url>
-    <loc>https://www.deyglobalexporters.com</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.deyglobalexporters.com/</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/about</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/products</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/certifications</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.deyglobalexporters.com/contact</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://www.deyglobalexporters.com/blog</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://www.deyglobalexporters.com/contact</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/terms</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/privacy</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Product Pages -->
+  <url>
+    <loc>https://www.deyglobalexporters.com/products/raw-indian-temple-hair-bulk</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/products/wefted-remy-hair-bundles-double-drawn</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/products/lace-closures-4x4-5x5-raw-indian</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/products/lace-frontals-13x4-13x6-raw-indian</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/products/specialty-curly-kinky-raw-indian-hair</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/products/single-drawn-remy-bundles-wholesale</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
     <loc>https://www.deyglobalexporters.com/blog/how-to-identify-genuine-raw-indian-temple-hair</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/blog/remy-vs-non-remy-hair-what-wig-manufacturers-need-to-know</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/blog/understanding-hs-code-0501-human-hair-imports</loc>
-    <lastmod>2025-01-25</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/blog/how-indian-temple-hair-is-collected</loc>
-    <lastmod>2024-12-12</lastmod>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.deyglobalexporters.com/blog/importing-hair-from-india-lead-times-usa-eu</loc>
-    <lastmod>2024-11-05</lastmod>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/blog/sun-drying-raw-indian-hair-quality-impact</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/blog/village-level-hair-sorting-india</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/blog/bulk-hair-storage-and-handling-best-practices</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deyglobalexporters.com/blog/natural-texture-variation-in-indian-hair</loc>
+    <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
