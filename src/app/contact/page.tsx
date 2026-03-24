@@ -75,13 +75,14 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* ✅ Corrected email: deyglobalexport@gmail.com */}
                 <div className="flex gap-4 p-5 border border-[var(--border)] rounded-xl">
                   <div className="w-10 h-10 rounded-lg bg-[var(--navy)] flex items-center justify-center flex-shrink-0">
                     <Mail size={18} className="text-[var(--accent)]" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-1">Export Email</p>
-                    <a href="mailto:deyglobalexporters@gmail.com" className="text-sm text-[var(--navy)] leading-relaxed block">deyglobalexporters@gmail.com</a>
+                    <a href="mailto:deyglobalexport@gmail.com" className="text-sm text-[var(--navy)] leading-relaxed block">deyglobalexport@gmail.com</a>
                   </div>
                 </div>
 
