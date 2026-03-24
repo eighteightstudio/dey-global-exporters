@@ -101,7 +101,7 @@ Understanding what separates genuine raw temple hair from processed alternatives
     author: 'DEY GLOBAL EXPORTERS Export Team',
     date: '2025-03-10',
     readTime: '8 min read',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/blog_genuine_check_two.png',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Blog%20Page/blog_genuine_check_two.png',
     tags: ['Temple Hair', 'Quality', 'Raw Hair', 'Identification', 'Remy'],
     relatedProducts: ['raw-indian-temple-hair-bulk'],
   },
