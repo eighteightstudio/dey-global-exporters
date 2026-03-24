@@ -100,10 +100,8 @@ export default function BlogArticlePage({ params }: PageProps) {
 
 <div className="bg-white">
   <div className="max-w-4xl mx-auto px-6 pt-10">
-    <div
-      className="relative w-full overflow-hidden rounded-2xl"
-      style={{ height: '420px' }}
-    >
+    <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
+
       <img
         src={post.image}
         alt={post.title}
@@ -113,6 +111,7 @@ export default function BlogArticlePage({ params }: PageProps) {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
+          filter: 'brightness(1.05)', // ensures image is visible
         }}
       />
 
@@ -121,9 +120,10 @@ export default function BlogArticlePage({ params }: PageProps) {
           position: 'absolute',
           inset: 0,
           background:
-            'linear-gradient(to top, rgba(10,22,40,0.7) 0%, rgba(10,22,40,0.2) 60%, transparent 100%)',
+            'linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.1), transparent)',
         }}
       />
+
     </div>
   </div>
 </div>
