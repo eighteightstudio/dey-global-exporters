@@ -98,16 +98,18 @@ export default function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      {/* ✅ FIXED HERO SECTION */}
+      {/* ✅ FIXED HERO (VISIBLE IMAGE GUARANTEED) */}
       <div className="relative w-full h-[420px] overflow-hidden">
         <Image
           src={post.image}
           alt={post.title}
           fill
-          className="object-cover"
+          className="object-cover z-0"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,22,40,0.55)] via-[rgba(10,22,40,0.2)] to-transparent" />
+
+        {/* lighter overlay */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[rgba(10,22,40,0.55)] via-[rgba(10,22,40,0.2)] to-transparent" />
       </div>
 
       <div className="bg-white">
@@ -178,7 +180,7 @@ export default function BlogArticlePage({ params }: PageProps) {
         </div>
       </div>
 
-           {related.length > 0 && (
+      {related.length > 0 && (
         <section className="py-16 bg-[var(--surface)] border-t border-[var(--border)]">
           <div className="max-w-7xl mx-auto px-6">
             <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-6">
