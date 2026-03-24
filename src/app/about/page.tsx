@@ -122,7 +122,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/our_story_section.png"
+                  src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/About%20Us/our_story_section.png"
                   alt="DEY GLOBAL EXPORTERS — human hair sorting and grading facility, West Bengal"
                   fill
                   quality={90}
@@ -196,7 +196,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="relative aspect-video rounded-2xl overflow-hidden lg:aspect-[4/3]">
               <Image
-                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/our_sourcing_philosophy.png"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/About%20Us/our_sourcing_philosophy.png"
                 alt="Temple and household hair collection process — ethical raw hair sourcing India"
                 fill
                 quality={90}
