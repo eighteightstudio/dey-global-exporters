@@ -1,8 +1,51 @@
 "use client"
 
 import { useState } from 'react'
-import { Send, CheckCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
+import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+// ─── EmailJS Configuration ────────────────────────────────────────────────────
+// Replace these three values with your real EmailJS credentials.
+// Get them from: https://www.emailjs.com/
+//
+//  1. Sign in → Account → API Keys → copy "Public Key"  → EMAILJS_PUBLIC_KEY
+//  2. Email Services → your connected Gmail service → copy Service ID → EMAILJS_SERVICE_ID
+//  3. Email Templates → your template → copy Template ID → EMAILJS_TEMPLATE_ID
+//
+// IMPORTANT: All three values are safe to expose in the browser (they are
+// public keys, not secret keys). EmailJS is designed for client-side use.
+// ─────────────────────────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID  = 'service_nmwzadu'    // e.g. "service_xxxxxxx"
+const EMAILJS_TEMPLATE_ID = 'template_5avo6gj'   // e.g. "template_xxxxxxx"
+const EMAILJS_PUBLIC_KEY  = 'u56c_XgztxW-8WHkE'     // e.g. "xxxxxxxxxxxxxxxxxxxx"
+
+// ─── EmailJS Template Variables ───────────────────────────────────────────────
+// In your EmailJS template, use these exact variable names wrapped in double
+// curly braces: {{from_name}}, {{from_email}}, {{company}}, etc.
+//
+// Recommended template body (paste into EmailJS template editor):
+//
+//  New lead from DEY GLOBAL EXPORTERS website
+//
+//  Name:     {{from_name}}
+//  Email:    {{from_email}}
+//  Company:  {{company}}
+//  Website:  {{website}}
+//  Role:     {{role}}
+//  Country:  {{country}}
+//  City:     {{city}}
+//  WhatsApp: {{whatsapp}}
+//
+//  Products of Interest: {{products}}
+//  Monthly Volume:       {{volume}}
+//
+//  Message:
+//  {{message}}
+//
+//  ---
+//  Sent from deyglobalexporters.com contact form
+// ─────────────────────────────────────────────────────────────────────────────
 
 const productOptions = [
   'Raw Virgin Hair Ball Combo (A1 Quality)',
@@ -45,12 +88,17 @@ const initialState = {
   message: '',
 }
 
-export function ContactForm() {
-  const [form, setForm] = useState(initialState)
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
+type FormState = typeof initialState
+type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+export function ContactForm() {
+  const [form, setForm] = useState<FormState>(initialState)
+  const [status, setStatus] = useState<SubmitStatus>('idle')
+  const [errorMsg, setErrorMsg] = useState<string>('')
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) {
     const { name, value } = e.target
     setForm((prev) => ({ ...prev, [name]: value }))
   }
@@ -64,16 +112,59 @@ export function ContactForm() {
     }))
   }
 
-  function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
+  async function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-      setSubmitted(true)
-    }, 1200)
+
+    // Basic client-side guard
+    if (
+      !form.firstName.trim() ||
+      !form.email.trim() ||
+      !form.company.trim() ||
+      !form.whatsapp.trim() ||
+      form.products.length === 0
+    ) {
+      return
+    }
+
+    setStatus('loading')
+    setErrorMsg('')
+
+    // Build the template params object — keys must match your EmailJS template
+    const templateParams = {
+      from_name: `${form.firstName.trim()} ${form.lastName.trim()}`.trim(),
+      from_email: form.email.trim(),
+      company: form.company.trim(),
+      website: form.website.trim() || 'Not provided',
+      role: form.role || 'Not specified',
+      country: form.country.trim(),
+      city: form.city.trim() || 'Not provided',
+      whatsapp: form.whatsapp.trim(),
+      products: form.products.join(', '),
+      volume: form.volume || 'Not specified',
+      message: form.message.trim() || 'No additional message',
+      // reply_to makes it easy to reply directly to the lead from Gmail
+      reply_to: form.email.trim(),
+    }
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      )
+      setStatus('success')
+    } catch (err) {
+      console.error('EmailJS error:', err)
+      setErrorMsg(
+        'Something went wrong sending your inquiry. Please try WhatsApp or email us directly at deyglobalexport@gmail.com'
+      )
+      setStatus('error')
+    }
   }
 
-  if (submitted) {
+  // ── Success state ──────────────────────────────────────────────────────────
+  if (status === 'success') {
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
         <div className="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center">
@@ -91,7 +182,7 @@ export function ContactForm() {
           </a>
         </p>
         <button
-          onClick={() => { setForm(initialState); setSubmitted(false) }}
+          onClick={() => { setForm(initialState); setStatus('idle'); setErrorMsg('') }}
           className="mt-2 text-xs text-[var(--text-muted)] underline underline-offset-2"
         >
           Submit another inquiry
@@ -100,12 +191,32 @@ export function ContactForm() {
     )
   }
 
-  const inputClass = 'w-full border border-[var(--border)] rounded-lg px-4 py-2.5 text-sm text-[var(--navy)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all duration-150 bg-white'
+  // ── Form styles ────────────────────────────────────────────────────────────
+  const inputClass =
+    'w-full border border-[var(--border)] rounded-lg px-4 py-2.5 text-sm text-[var(--navy)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all duration-150 bg-white'
 
-  const labelClass = 'block text-xs font-semibold text-[var(--navy)] uppercase tracking-wide mb-1.5'
+  const labelClass =
+    'block text-xs font-semibold text-[var(--navy)] uppercase tracking-wide mb-1.5'
+
+  const isDisabled =
+    status === 'loading' ||
+    !form.firstName ||
+    !form.email ||
+    !form.company ||
+    !form.whatsapp ||
+    form.products.length === 0
 
   return (
     <div className="flex flex-col gap-5">
+
+      {/* Error banner */}
+      {status === 'error' && errorMsg && (
+        <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <AlertCircle size={18} className="text-red-500 flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-red-700 leading-relaxed">{errorMsg}</p>
+        </div>
+      )}
+
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className={labelClass}>First Name *</label>
@@ -275,16 +386,16 @@ export function ContactForm() {
 
       <button
         onClick={handleSubmit}
-        disabled={loading || !form.firstName || !form.email || !form.company || !form.whatsapp || form.products.length === 0}
+        disabled={isDisabled}
         className={cn(
           'w-full flex items-center justify-center gap-2.5 bg-[var(--accent)] text-[var(--navy)] font-semibold rounded-lg px-6 py-3.5 text-sm transition-all duration-200',
           'hover:bg-[var(--accent-hover)] disabled:opacity-50 disabled:cursor-not-allowed'
         )}
       >
-        {loading ? (
+        {status === 'loading' ? (
           <>
             <span className="w-4 h-4 border-2 border-[var(--navy)]/30 border-t-[var(--navy)] rounded-full animate-spin" />
-            Sending Inquiry
+            Sending Inquiry…
           </>
         ) : (
           <>
