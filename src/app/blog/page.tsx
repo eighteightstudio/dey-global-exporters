@@ -58,20 +58,7 @@ export default function BlogPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Category pills */}
-          <div className="flex flex-wrap gap-2 mb-10">
-            {categories.map((cat) => (
-              <span
-                key={cat}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium border ${
-                  cat === 'All'
-                    ? 'bg-[var(--navy)] text-white border-[var(--navy)]'
-                    : 'bg-white text-[var(--text-muted)] border-[var(--border)]'
-                }`}
-              >
-                {cat}
-              </span>
-            ))}
-          </div>
+          <BlogClient />
 
           {/* Featured post */}
           <div className="mb-12">
