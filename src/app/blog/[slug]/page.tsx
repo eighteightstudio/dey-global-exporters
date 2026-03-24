@@ -98,26 +98,16 @@ export default function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="relative w-full bg-[var(--navy)]" style={{ height: '420px', overflow: 'hidden' }}>
-        <img
+      {/* ✅ FIXED HERO SECTION */}
+      <div className="relative w-full h-[420px] overflow-hidden">
+        <Image
           src={post.image}
           alt={post.title}
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            opacity: 0.75,
-          }}
+          fill
+          className="object-cover"
+          priority
         />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to top, rgba(10,22,40,0.85) 0%, rgba(10,22,40,0.3) 50%, transparent 100%)',
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,22,40,0.85)] via-[rgba(10,22,40,0.3)] to-transparent" />
       </div>
 
       <div className="bg-white">
@@ -204,4 +194,3 @@ export default function BlogArticlePage({ params }: PageProps) {
       )}
     </>
   )
-}
