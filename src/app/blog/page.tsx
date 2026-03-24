@@ -1,9 +1,6 @@
-'use client'
-
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { BlogCard } from '@/components/ui/BlogCard'
 import { CtaBanner } from '@/components/sections/CtaBanner'
@@ -36,15 +33,8 @@ const topicTags = [
 ]
 
 export default function BlogPage() {
-  const [activeCategory, setActiveCategory] = useState('All')
-
-  const filteredPosts =
-    activeCategory === 'All'
-      ? blogPosts
-      : blogPosts.filter((post) => post.category === activeCategory)
-
-  const featured = filteredPosts[0]
-  const rest = filteredPosts.slice(1)
+  const featured = blogPosts[0]
+  const rest = blogPosts.slice(1)
 
   return (
     <>
@@ -67,75 +57,71 @@ export default function BlogPage() {
       {/* Blog grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-
           {/* Category pills */}
           <div className="flex flex-wrap gap-2 mb-10">
             {categories.map((cat) => (
-              <button
+              <span
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium border transition ${
-                  activeCategory === cat
+                className={`px-4 py-1.5 rounded-full text-sm font-medium border ${
+                  cat === 'All'
                     ? 'bg-[var(--navy)] text-white border-[var(--navy)]'
-                    : 'bg-white text-[var(--text-muted)] border-[var(--border)] hover:bg-[var(--surface)]'
+                    : 'bg-white text-[var(--text-muted)] border-[var(--border)]'
                 }`}
               >
                 {cat}
-              </button>
+              </span>
             ))}
           </div>
 
           {/* Featured post */}
-          {featured && (
-            <div className="mb-12">
-              <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-4">
-                Featured Article
-              </p>
-              <div className="border border-[var(--border)] rounded-2xl overflow-hidden bg-white group hover:-translate-y-1 transition-transform duration-200">
-                <div className="grid md:grid-cols-2">
-                  <div className="relative min-h-[260px] bg-[var(--surface)] overflow-hidden">
-                    <Image
-                      src={featured.image}
-                      alt={featured.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="absolute top-3 left-3">
-                      <span className="bg-[var(--navy)] text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
-                        {featured.category}
-                      </span>
-                    </div>
+          <div className="mb-12">
+            <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-4">
+              Featured Article
+            </p>
+            <div className="border border-[var(--border)] rounded-2xl overflow-hidden bg-white group hover:-translate-y-1 transition-transform duration-200">
+              <div className="grid md:grid-cols-2">
+                <div className="relative min-h-[260px] bg-[var(--surface)] overflow-hidden">
+                  <Image
+                    src={featured.image}
+                    alt={featured.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-[var(--navy)] text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                      {featured.category}
+                    </span>
                   </div>
-                  <div className="p-8 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
-                      <span>
-                        {new Date(featured.date).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        })}
-                      </span>
-                      <span>·</span>
-                      <span>{featured.readTime}</span>
-                    </div>
-                    <h2 className="font-bold text-2xl text-[var(--navy)] font-heading leading-snug mb-3">
-                      {featured.title}
-                    </h2>
-                    <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-5">
-                      {featured.excerpt}
-                    </p>
-                    <Link
-                      href={`/blog/${featured.slug}`}
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--navy)] hover:text-[var(--navy-muted)] transition-colors"
-                    >
-                      Read Full Article →
-                    </Link>
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
+                    <span>
+                      {new Date(featured.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
+                    </span>
+                    <span>·</span>
+                    <span>{featured.readTime}</span>
                   </div>
+                  <h2 className="font-bold text-2xl text-[var(--navy)] font-heading leading-snug mb-3">
+                    {featured.title}
+                  </h2>
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-5">
+                    {featured.excerpt}
+                  </p>
+                  <Link
+                    href={`/blog/${featured.slug}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--navy)] hover:text-[var(--navy-muted)] transition-colors"
+                  >
+                    Read Full Article →
+                  </Link>
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Remaining posts */}
           <div>
@@ -148,7 +134,6 @@ export default function BlogPage() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
