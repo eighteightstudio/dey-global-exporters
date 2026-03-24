@@ -102,18 +102,13 @@ export default function BlogArticlePage({ params }: PageProps) {
   <div className="max-w-4xl mx-auto px-6 pt-10">
     <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
 
-      <img
-        src={post.image}
-        alt={post.title}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          filter: 'brightness(1.05)', // ensures image is visible
-        }}
-      />
+      <Image
+  src={post.image}
+  alt={post.title}
+  fill
+  className="object-cover"
+  unoptimized
+/>
 
       <div
         style={{
