@@ -76,10 +76,11 @@ export function Footer() {
                   +91 70034 55085
                 </a>
               </li>
+              {/* ✅ Corrected email: deyglobalexport@gmail.com */}
               <li className="flex gap-3 items-center">
                 <Mail size={13} className="text-[var(--accent)] flex-shrink-0" />
-                <a href="mailto:deyglobalexporters@gmail.com" className="text-sm text-white/70 hover:text-[var(--accent)] transition-colors break-all">
-                  deyglobalexporters@gmail.com
+                <a href="mailto:deyglobalexport@gmail.com" className="text-sm text-white/70 hover:text-[var(--accent)] transition-colors break-all">
+                  deyglobalexport@gmail.com
                 </a>
               </li>
               <li className="flex gap-3 items-center">
