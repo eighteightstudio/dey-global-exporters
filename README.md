@@ -1,165 +1,285 @@
 # DEY GLOBAL EXPORTERS — Next.js 14 Website
 
-**Domain:** https://www.deyglobalexporters.com  
-**Stack:** Next.js 14 App Router · TypeScript · Tailwind CSS · lucide-react · clsx  
+> **B2B export website for raw Indian temple hair** — built for wig manufacturers, wholesalers, and international buyers.
+
+**Domain:** https://www.deyglobalexporters.com
+**Stack:** Next.js 14 App Router · TypeScript · Tailwind CSS · lucide-react · clsx
 **Deployment:** Vercel
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Pages & Routes](#pages--routes)
+- [Data Layer](#data-layer)
+- [Components](#components)
+- [Styling System](#styling-system)
+- [SEO](#seo)
+- [Deployment](#deployment)
+- [Pre-launch Checklist](#pre-launch-checklist)
+
+---
+
+## Overview
+
+Dey Global Exporters is a Kolkata-based exporter of raw Indian temple hair. This website serves as the company's primary B2B marketing and lead-generation platform, showcasing products, certifications, and export capabilities to international buyers.
+
+**Key features:**
+- Product catalogue with client-side filtering (6 products)
+- Full blog with 9 long-form SEO articles, dynamic `[slug]` routing
+- Certifications page (IEC, GST, MSME, DGFT, FIEO, EPC)
+- Contact form with EmailJS integration
+- FAQ accordion (10 questions across 5 categories)
+- WhatsApp floating CTA button
+- Scroll-reveal animations via `IntersectionObserver`
+- Organization + Article JSON-LD structured data
+- Mobile-first responsive design
 
 ---
 
 ## Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-org/dey-global-exporters.git
+cd dey-global-exporters
+
 # Install dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+```bash
+# Other commands
+npm run build    # Production build
+npm start        # Start production server
+npm run lint     # Run ESLint
+```
 
 ---
 
 ## Project Structure
 
 ```
-src/
-├── app/                    # App Router pages
-│   ├── layout.tsx          # Root layout (fonts, metadata, Navbar, Footer)
-│   ├── globals.css         # CSS variables, animations, glass button
-│   ├── page.tsx            # Homepage
-│   ├── about/page.tsx
-│   ├── products/
-│   │   ├── page.tsx
-│   │   └── ProductsClientPage.tsx   # Client-side filter component
-│   ├── certifications/page.tsx
-│   ├── blog/
-│   │   ├── page.tsx
-│   │   └── [slug]/page.tsx
-│   ├── contact/
-│   │   ├── page.tsx
-│   │   └── ContactForm.tsx  # Client form component
-│   ├── terms/page.tsx
-│   └── privacy/page.tsx
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx       # Sticky, blur, mobile drawer
-│   │   └── Footer.tsx       # 4-column navy footer
-│   ├── ui/
-│   │   ├── Button.tsx
-│   │   ├── SectionHeading.tsx
-│   │   ├── Badge.tsx
-│   │   ├── ProductCard.tsx
-│   │   ├── BlogCard.tsx
-│   │   └── WhatsAppButton.tsx  # Floating glass button (homepage only)
-│   └── sections/
-│       ├── HeroSection.tsx
-│       ├── TrustBar.tsx
-│       ├── ProductGrid.tsx
-│       ├── ProcessTimeline.tsx
-│       ├── WhyIndianHair.tsx
-│       ├── CertificationsPreview.tsx
-│       ├── TestimonialsSection.tsx
-│       ├── BlogPreview.tsx
-│       ├── FaqAccordion.tsx
-│       └── CtaBanner.tsx
-├── data/
-│   ├── products.ts         # 6 products with full specs
-│   ├── blogPosts.ts        # 5 full blog articles
-│   ├── certifications.ts   # 6 certifications (IEC, GST, MSME, DGFT, FIEO, EPC)
-│   └── faqs.ts             # 10 FAQs across 5 categories
-├── hooks/
-│   └── useFadeUp.ts        # IntersectionObserver scroll animation hook
-└── lib/
-    └── utils.ts            # clsx utility wrapper
+dey-global-exporters/
+├── public/
+│   ├── sitemap.xml          # Static sitemap for search engines
+│   └── og-image.jpg         # Open Graph image (1200×630) — replace before launch
+├── src/
+│   ├── app/                 # Next.js App Router pages
+│   │   ├── layout.tsx       # Root layout: fonts, metadata, Navbar, Footer, JSON-LD
+│   │   ├── globals.css      # CSS variables, animations, glass button styles
+│   │   ├── page.tsx         # Homepage (assembles all sections)
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   ├── products/
+│   │   │   ├── page.tsx                  # SSR wrapper
+│   │   │   └── ProductsClientPage.tsx    # Client-side category filter
+│   │   ├── certifications/
+│   │   │   └── page.tsx
+│   │   ├── blog/
+│   │   │   ├── page.tsx                  # Blog listing
+│   │   │   ├── BlogClient.tsx            # Client search/filter
+│   │   │   └── [slug]/page.tsx           # Dynamic article page + JSON-LD
+│   │   ├── contact/
+│   │   │   ├── page.tsx
+│   │   │   └── ContactForm.tsx           # EmailJS contact form (client component)
+│   │   ├── terms/
+│   │   │   └── page.tsx
+│   │   └── privacy/
+│   │       └── page.tsx
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.tsx               # Sticky navbar with mobile drawer
+│   │   │   └── Footer.tsx               # 4-column navy footer
+│   │   ├── ui/                          # Reusable UI primitives
+│   │   │   ├── Button.tsx
+│   │   │   ├── SectionHeading.tsx
+│   │   │   ├── Badge.tsx
+│   │   │   ├── ProductCard.tsx
+│   │   │   ├── BlogCard.tsx
+│   │   │   └── WhatsAppButton.tsx       # Floating glass button (homepage only)
+│   │   └── sections/                    # Homepage section components
+│   │       ├── HeroSection.tsx
+│   │       ├── TrustBar.tsx
+│   │       ├── ProductGrid.tsx
+│   │       ├── ProcessTimeline.tsx
+│   │       ├── WhyIndianHair.tsx
+│   │       ├── CertificationsPreview.tsx
+│   │       ├── TestimonialsSection.tsx
+│   │       ├── BlogPreview.tsx
+│   │       ├── FaqAccordion.tsx
+│   │       └── CtaBanner.tsx
+│   ├── data/                            # All site content as TypeScript
+│   │   ├── products.ts                  # 6 products with full specs & metadata
+│   │   ├── blogPosts.ts                 # 9 full blog articles with slugs
+│   │   ├── certifications.ts            # 6 certifications with numbers
+│   │   └── faqs.ts                      # 10 FAQs across 5 categories
+│   ├── hooks/
+│   │   └── useFadeUp.ts                 # IntersectionObserver scroll animation
+│   └── lib/
+│       └── utils.ts                     # clsx utility wrapper
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+├── postcss.config.js
+└── vercel.json
 ```
 
 ---
 
-## Color Palette
+## Pages & Routes
 
-All defined as CSS variables in `globals.css` and extended in `tailwind.config.ts`:
+| Route | Description |
+|---|---|
+| `/` | Homepage — Hero, TrustBar, ProductGrid, Process, WhyIndianHair, Certifications preview, Testimonials, Blog preview, FAQ, CTA |
+| `/about` | Company story, mission, team |
+| `/products` | Full product catalogue with category filter |
+| `/certifications` | All 6 export certifications |
+| `/blog` | Blog listing with client-side search |
+| `/blog/[slug]` | Dynamic article page with Article JSON-LD |
+| `/contact` | Contact form (EmailJS) + company details |
+| `/terms` | Terms & Conditions |
+| `/privacy` | Privacy Policy |
+
+---
+
+## Data Layer
+
+All content is managed in `/src/data/` as plain TypeScript — no CMS required.
+
+### `products.ts`
+Each product object contains: `id`, `slug`, `name`, `category`, `shortDescription`, `longDescription`, `specs[]`, `moq`, `leadTime`, `tags[]`, `imageUrl`.
+
+To add a product, append an entry and it will automatically appear in `ProductGrid` and the `/products` page.
+
+### `blogPosts.ts`
+Each post contains: `slug`, `title`, `excerpt`, `content`, `date`, `readTime`, `category`, `imageUrl`.
+
+The `content` field supports Markdown-like formatting rendered via the blog `[slug]` page. Add a post here and it will appear in the listing and generate a dynamic route.
+
+### `certifications.ts`
+Contains: `id`, `name`, `number`, `issuedBy`, `description`, `icon`. Update certificate numbers before launch.
+
+### `faqs.ts`
+Array of `{ category, question, answer }` objects rendered by `FaqAccordion`.
+
+---
+
+## Components
+
+### Layout
+- **`Navbar`** — Sticky top bar with blur effect, mobile hamburger drawer, and active link highlighting.
+- **`Footer`** — 4-column layout: brand info, quick links, products, contact details.
+
+### UI Primitives
+- **`Button`** — Supports `variant` (`primary` | `outline` | `ghost`) and `size` props.
+- **`SectionHeading`** — Consistent `<h2>` + subtitle pattern with accent underline.
+- **`Badge`** — Small label pill for product categories and blog tags.
+- **`ProductCard`** — Image, name, category badge, short description, CTA link.
+- **`BlogCard`** — Thumbnail, date, read time, excerpt, slug link.
+- **`WhatsAppButton`** — Fixed bottom-right floating button, rendered only on homepage.
+
+### Hooks
+- **`useFadeUp`** — Returns a `ref` and `isVisible` boolean. Attach `ref` to any element to trigger a fade-up animation on scroll into view.
+
+---
+
+## Styling System
+
+### CSS Variables (defined in `globals.css`, extended in `tailwind.config.ts`)
 
 | Token | Hex | Usage |
-|-------|-----|-------|
+|---|---|---|
 | `--navy` | `#0A1628` | Primary backgrounds, headings, navbar, footer, hero |
 | `--navy-muted` | `#1E3A5F` | Hover states, secondary navy |
 | `--accent` | `#FFDB78` | CTAs, highlights, badge accents |
-| `--accent-hover` | `#F5C842` | Hover state for accent |
+| `--accent-hover` | `#F5C842` | Hover state for accent elements |
 | `--white` | `#FFFFFF` | Page background, card backgrounds |
-| `--surface` | `#F8F9FA` | Section alternates |
+| `--surface` | `#F8F9FA` | Alternating section backgrounds |
 | `--text-muted` | `#6B7280` | Secondary body text |
 | `--border` | `#E5E7EB` | Card borders, dividers |
 
----
-
-## Typography
-
-- **Headings:** Playfair Display (Google Fonts) — `font-heading` / `var(--font-playfair)`
-- **Body:** DM Sans (Google Fonts) — `font-body` / `var(--font-dm-sans)`
-
-Both loaded via `next/font/google` in `layout.tsx`.
+### Typography
+- **Headings:** Playfair Display — loaded via `next/font/google` as `var(--font-playfair)` → Tailwind class `font-heading`
+- **Body:** DM Sans — loaded via `next/font/google` as `var(--font-dm-sans)` → Tailwind class `font-body`
 
 ---
 
-## Before Deploying — Update These
+## SEO
 
-1. **Contact details** (search for `98765 43210` and `exports@deyglobalexporters.com`)
-2. **Address** (search for `123 Export Industrial Zone`)
-3. **Certificate numbers** (search for `IEC-XXXX-XXXX` and `19XXXXX1234X1ZX`)
-4. **`/public/og-image.jpg`** — Add a real 1200×630 OG image
-5. **Google Analytics** — Add GA4 script to `layout.tsx` if needed
-6. **Form backend** — Wire `ContactForm.tsx` to an email service (Resend, Formspree, etc.)
-7. **Testimonials** — Replace placeholder names/quotes with real client testimonials
-8. **Team photos** — Replace picsum.photos seeds with real team photos
-9. **Blog content** — All 5 articles have real content; review for any updates needed
-10. **`public/sitemap.xml`** — Update `lastmod` dates after launch
+- `generateMetadata()` exported from every page for per-page `<title>` and `<meta>` tags
+- **Organization JSON-LD** schema in `layout.tsx`
+- **Article JSON-LD** schema in `blog/[slug]/page.tsx`
+- Static `sitemap.xml` in `/public` — covers all static routes and blog/product slugs
+- `robots.txt` in `/public`
+- Descriptive `alt` text on all images
+- Single `<h1>` per page
+- Mobile-first responsive layout
+- Open Graph and Twitter card metadata on all pages
 
 ---
 
-## Deployment (Vercel)
+## Deployment
+
+This project is configured for **Vercel** deployment.
+
+### Option 1 — Vercel CLI
 
 ```bash
-# Install Vercel CLI
+# Install Vercel CLI globally
 npm i -g vercel
 
-# Deploy
+# Preview deployment
 vercel
 
 # Production deployment
 vercel --prod
 ```
 
-Or connect the GitHub repo to Vercel dashboard for automatic deployments.
+### Option 2 — GitHub Integration
+
+1. Push repo to GitHub.
+2. Go to [vercel.com](https://vercel.com) → **Add New Project**.
+3. Import the GitHub repository.
+4. Vercel auto-detects Next.js — no build configuration needed.
+5. Every push to `main` triggers an automatic production deployment.
+
+### Environment Variables
+
+No environment variables are required by default. If you wire up EmailJS, add:
+
+```
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
 ---
 
-## SEO
+## Pre-launch Checklist
 
-- Organization JSON-LD schema in `layout.tsx`
-- Article JSON-LD schema in `blog/[slug]/page.tsx`
-- `generateMetadata()` on every page
-- `robots.txt` and `sitemap.xml` in `/public`
-- All images have descriptive alt text
-- One `<h1>` per page
-- Mobile-first responsive design
+Before going live, update the following placeholders throughout the codebase:
 
----
-
-## Content Architecture
-
-All content lives in `/src/data/` as TypeScript files:
-
-- **Products:** Edit `products.ts` to add/update products — `ProductCard` renders automatically
-- **Blog:** Add posts to `blogPosts.ts` with `slug`, `content` (Markdown-like), and metadata
-- **Certifications:** Update `certifications.ts` with real certificate numbers
-- **FAQs:** Add/edit in `faqs.ts` — `FaqAccordion` renders from data
+- [ ] **Phone number** — Replace `98765 43210` with the real number
+- [ ] **Email address** — Replace `exports@deyglobalexporters.com` if needed
+- [ ] **Physical address** — Replace `123 Export Industrial Zone` with real address
+- [ ] **Certificate numbers** — Replace `IEC-XXXX-XXXX`, `19XXXXX1234X1ZX`, etc. in `certifications.ts`
+- [ ] **OG image** — Add a real `1200×630` JPEG to `/public/og-image.jpg`
+- [ ] **Testimonials** — Replace placeholder names and quotes in `TestimonialsSection.tsx`
+- [ ] **Team photos** — Replace `picsum.photos` image seeds with real team photos
+- [ ] **EmailJS** — Wire `ContactForm.tsx` to a real EmailJS (or Resend/Formspree) account
+- [ ] **Google Analytics** — Add GA4 `<Script>` tag to `layout.tsx` if tracking is required
+- [ ] **Sitemap `lastmod`** — Update dates in `public/sitemap.xml` after final content review
+- [ ] **Blog content review** — Review all 9 articles for accuracy and branding consistency
+- [ ] **`robots.txt`** — Confirm the domain in `/public/robots.txt` matches the live domain
 
 ---
 
