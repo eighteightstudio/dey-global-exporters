@@ -5,6 +5,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { BlogCard } from '@/components/ui/BlogCard'
 import { CtaBanner } from '@/components/sections/CtaBanner'
 import { blogPosts } from '@/data/blogPosts'
+import BlogClient from './BlogClient'
 
 export const metadata: Metadata = {
   title: 'Blogs | Raw Hair Export Guides & Industry Insights',
