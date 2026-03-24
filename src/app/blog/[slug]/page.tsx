@@ -107,7 +107,7 @@ export default function BlogArticlePage({ params }: PageProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,22,40,0.85)] via-[rgba(10,22,40,0.3)] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,22,40,0.55)] via-[rgba(10,22,40,0.2)] to-transparent" />
       </div>
 
       <div className="bg-white">
