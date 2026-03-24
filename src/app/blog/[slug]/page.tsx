@@ -100,22 +100,26 @@ export default function BlogArticlePage({ params }: PageProps) {
 
 <div className="bg-white">
   <div className="max-w-4xl mx-auto px-6 pt-10">
-    <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
+    <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
 
-      <Image
-  src={post.image}
-  alt={post.title}
-  fill
-  className="object-cover"
-  unoptimized
-/>
+      <img
+        src={post.image}
+        alt={post.title}
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+        }}
+      />
 
       <div
         style={{
           position: 'absolute',
           inset: 0,
           background:
-            'linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.1), transparent)',
+            'linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.05), transparent)',
         }}
       />
 
