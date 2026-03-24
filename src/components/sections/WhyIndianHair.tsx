@@ -44,7 +44,7 @@ export function WhyIndianHair() {
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
-                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/why_indian_hair_section.png"
+                src="https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Home%20Page/why_indian_hair_section.png"
                 alt="South Indian temple hair sorting — raw human hair quality inspection India"
                 fill
                 quality={90}
