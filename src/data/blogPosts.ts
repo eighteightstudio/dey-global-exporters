@@ -101,7 +101,7 @@ Understanding what separates genuine raw temple hair from processed alternatives
     author: 'DEY GLOBAL EXPORTERS Export Team',
     date: '2025-03-10',
     readTime: '8 min read',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/blog_genuine_check_two.png',
+    image: 'https://picsum.photos/seed/blog-temple-hair-quality/1200/630',
     tags: ['Temple Hair', 'Quality', 'Raw Hair', 'Identification', 'Remy'],
     relatedProducts: ['raw-indian-temple-hair-bulk'],
   },
@@ -126,227 +126,198 @@ Every strand of human hair is covered in microscopic overlapping scales called t
 
 ## How Cuticle Alignment Affects Product Performance
 
-| Property | Remy | Non-Remy |
-|----------|------|----------|
-| Tangling over time | Minimal | High after wash cycles |
-| Shedding | Low | Higher |
-| Initial feel | Naturally silky | Artificially silky (silicone) |
-| Feel after 3 washes | Same or improved | Rougher, coarser |
-| Color retention | High (accepts dye uniformly) | Variable (stripped cuticle absorbs unevenly) |
-| Lifespan with care | 1–3 years | 3–6 months |
-| Price per kg | Higher | Lower |
+**Tangling**: Non-Remy hair tangles significantly more than Remy. The random cuticle directions cause adjacent strands to interlock, especially after washing. For wig manufacturers, this means higher return rates and more complaints about matting.
 
-## The Silicone Problem in Non-Remy Hair
+**Longevity**: Acid-washed non-Remy hair has a dramatically shorter lifespan. Without cuticles, the hair shaft is exposed and degrades quickly with washing, heat styling, and everyday wear. Remy hair, especially raw Indian temple hair, can last 1–3 years with proper care.
 
-Because the cuticle is acid-stripped on non-Remy hair, manufacturers coat it in silicone or synthetic polymers to restore smooth feel. This creates a deceptive quality signal:
+**Dyeability**: Intact cuticles on Remy hair allow dye molecules to penetrate and bond properly, resulting in more even color uptake and longer color retention. Stripped non-Remy hair absorbs dye unevenly and fades faster.
 
-1. A new buyer touches the hair in the factory — silky smooth.
-2. The wig reaches the end customer — still smooth initially.
-3. After the first few wash cycles, silicone washes out.
-4. The hair becomes dry, tangled, and prone to breakage.
-5. Returns, complaints, and brand damage follow.
+**Silicone washout**: Non-Remy hair is often silicone-coated to feel smooth on first touch. This coating washes out within 2–4 shampoos, revealing the underlying rough, stripped cuticle — and triggering customer complaints about sudden quality drop-off.
 
-For wig brands that compete on customer satisfaction and repeat purchase, non-Remy hair is a false economy.
+## The Grading Spectrum
 
-## Single Donor vs Mixed Collection
+Not all Remy hair is equal. Within Remy-grade hair, there is a quality spectrum:
 
-Beyond Remy/non-Remy, wig manufacturers should also understand single-donor vs collected/mixed hair:
+| Grade | Description | Best For |
+|-------|-------------|----------|
+| Raw Virgin Remy | Completely unprocessed, cuticle-intact, zero chemical treatment | Premium wigs, luxury extensions |
+| Virgin Remy | Unprocessed but may have minor cleaning; cuticle intact | Mid-premium products |
+| Processed Remy | Cuticle-aligned but lightly processed (steam or dye) | Value-tier products |
+| Non-Remy | Cuticle randomly aligned or stripped; silicone-coated | Budget wigs, synthetic-blend products |
 
-**Single-donor hair** comes from one individual head. Texture, thickness, and porosity are internally consistent. Temple hair from tonsure rituals is always single-donor by nature.
+Raw virgin Remy temple hair from India sits at the top of this spectrum — the highest grade available in the global human hair market.
 
-**Collected/mixed hair** aggregates strands from multiple sources — combing fallout, salon floor sweepings, or household collection. Even when properly sorted, slight inconsistencies in texture and thickness are inherent.
+## How to Verify Remy Status Before Purchasing
 
-For high-end wig construction, single-donor Remy hair (temple sourced) is the gold standard.
+**Cuticle direction test**: Take a small bundle and run your finger from tip to root. Remy hair will feel rough (cuticles pointing outward against your finger direction). Non-Remy will feel uniformly smooth in both directions.
 
-## Double-Drawn vs Single-Drawn: The Thickness Question
+**Post-wash test**: The most definitive test. Request a small sample, wash it twice with regular shampoo without conditioner, allow it to dry naturally, and observe tangling and texture. Remy hair will remain manageable. Non-Remy will begin matting.
 
-Once you have Remy hair, the next commercial decision is draw quality:
+**Request documentation**: Legitimate Remy suppliers should be able to provide batch documentation and quality grading reports. At DEY GLOBAL EXPORTERS, we provide QC reports with every bulk shipment.
 
-**Double-drawn** bundles are processed to remove short strands, resulting in consistent thickness from root to tip. A 20-inch double-drawn bundle is thick and full throughout its length.
+## Why Raw Indian Temple Hair is the Gold Standard
 
-**Single-drawn** bundles retain the natural blend — a 20-inch bundle will have some shorter strands mixed in. They are thicker at the root and taper naturally toward the tip.
+Temple hair collected from Indian shrines is inherently Remy because:
 
-For premium wig brands: double-drawn.
-For volume wholesale operations with competitive pricing: single-drawn offers excellent value.
+- It is single-donor hair — all strands from one individual, naturally root-to-tip aligned
+- It is collected by razor shave (not cutting), preserving the full length and cuticle integrity
+- It is unprocessed at the source — no chemical treatment before export
+- It comes from young, healthy donors with naturally strong hair fiber
 
-## DEY GLOBAL EXPORTERS' Product Line by Grade
+This combination — single-donor origin, razor collection, zero processing — makes genuine temple hair the most consistent Remy raw material available to global wig manufacturers.
 
-- **Raw Temple Bulk Hair**: Single-donor Remy, zero processing — the highest grade for luxury wig factories.
-- **Wefted Remy Bundles (Double Drawn)**: Cuticle-aligned, machine-wefted, ideal for US/EU extension brands.
-- **Wefted Remy Bundles (Single Drawn)**: Competitive pricing for wholesale volume buyers.
-- **Lace Closures & Frontals**: Raw Indian Remy hair, hand-tied on Swiss lace.
-
-All Remy products are HS 05010020 compliant and exported with full documentation.
-
-*Ready to request samples and pricing? [Contact our team](/contact) today.*
+*Want to evaluate Remy quality firsthand? [Request a sample from DEY GLOBAL EXPORTERS](/contact) before committing to a bulk order.*
     `,
     category: 'Industry Education',
     author: 'DEY GLOBAL EXPORTERS Export Team',
-    date: '2025-02-18',
-    readTime: '7 min read',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/remy_vs_nonremy_hair.png',
-    tags: ['Remy Hair', 'Non-Remy', 'Wig Manufacturing', 'Quality', 'Double Drawn'],
+    date: '2025-01-20',
+    readTime: '9 min read',
+    image: 'https://picsum.photos/seed/blog-remy-vs-nonremy/1200/630',
+    tags: ['Remy', 'Non-Remy', 'Quality', 'Wig Manufacturing', 'Cuticle'],
     relatedProducts: ['wefted-remy-hair-bundles-double-drawn', 'single-drawn-remy-bundles-wholesale'],
   },
   {
     id: 'b3',
-    slug: 'understanding-hs-code-0501-human-hair-imports',
-    title: 'Understanding HS Code 0501 for Human Hair Imports — A Buyer\'s Guide',
+    slug: 'hs-code-0501-india-hair-export-compliance-guide',
+    title: 'HS Code 0501 Export Compliance Guide for Indian Raw Hair',
     excerpt:
-      'HS Code 0501 governs the classification and customs clearance of human hair globally. Understanding the sub-codes, documentation requirements, and India\'s DGFT export conditions will help you import with zero customs friction.',
+      'Navigating export compliance for Indian raw human hair requires understanding HS Code 0501 classifications, DGFT regulations, IEC requirements, and documentation standards. This guide covers everything B2B buyers and exporters need to know.',
     content: `
-# Understanding HS Code 0501 for Human Hair Imports — A Buyer's Guide
+# HS Code 0501 Export Compliance Guide for Indian Raw Hair
 
-Navigating customs classification is one of the most common friction points for international buyers importing raw human hair from India. A misclassified shipment can result in delays, additional duties, or in extreme cases, seizure at the port of entry.
+Exporting raw human hair from India is a regulated activity governed by the Directorate General of Foreign Trade (DGFT), the Reserve Bank of India (RBI), and Customs authorities. Buyers importing Indian hair need to understand the compliance landscape to avoid shipment delays, customs holds, and documentation penalties.
 
-This guide decodes HS Code 0501 and explains what Indian exporters and their global buyers need to understand for seamless customs clearance.
+## HS Code Classification: 0501
 
-## What is an HS Code?
+Human hair is classified under HS Chapter 05 — "Products of animal origin, not elsewhere specified or included."
 
-The Harmonized System (HS) is a globally standardized nomenclature for classifying traded products, maintained by the World Customs Organization (WCO). The first six digits are identical across all WCO member countries; individual countries may add further digits for national tariff purposes.
+The key sub-codes for Indian hair export:
 
-For human hair, the classification falls under **Chapter 05** of the HS: *Hides, Skins and Other Animal Products*.
+| HS Code | Description | Applicable Products |
+|---------|-------------|---------------------|
+| 0501.00.10 | Human hair, unworked | Raw temple hair, ball combos, unprocessed bulk hair |
+| 0501.00.20 | Human hair, worked (washed, cleaned) | Cleaned/sorted raw hair before processing |
+| 0501.00.30 | Waste of human hair | Hair sweepings, short waste |
 
-## HS Code Breakdown for Human Hair
+**For raw Indian temple hair exports**: The correct classification is 0501.00.10 (unworked human hair). Misclassification as a processed product can trigger higher duty rates at destination and questions about product authenticity.
 
-**05 01** — Human hair, unworked, whether or not washed or scoured; waste of human hair.
+## DGFT Regulations: FOB Minimum Price Policy
 
-The key Indian sub-classifications are:
+The DGFT has historically maintained a Minimum Export Price (MEP) policy for human hair to prevent undervaluation. As of the most recent policy:
 
-**HS 05010010** — Human hair, unworked (raw/unprocessed):
-- Natural state, not dyed, bleached, curled, or otherwise processed
-- Includes temple-donated hair, household collected hair
-- May be washed and sorted, but not chemically treated
-- Subject to India's FOB minimum of USD 65/kg under DGFT export policy
+- **Minimum FOB value**: USD 65 per kilogram for raw unworked hair (0501.00.10)
+- **Purpose**: Prevent underinvoicing and protect India's export tax base
+- **Implication for buyers**: Any supplier quoting significantly below the FOB minimum should raise questions about valuation accuracy or product classification
 
-**HS 05010020** — Human hair, worked (processed):
-- Washed, sorted, wefted, and potentially lightly processed
-- Covers machine-weft bundles, closures, frontals with minimal chemical treatment
-- Finished wigs and complex constructions may fall under Chapter 67 (HS 6703, 6704)
+Always verify current MEP requirements with the DGFT website or your freight forwarder, as these policies are subject to revision.
 
-## India's DGFT Export Policy: The FOB Rule
+## IEC: Import Export Code
 
-A critical compliance requirement that every Indian raw hair exporter must navigate:
+Every Indian exporter must hold a valid **Import Export Code (IEC)** issued by DGFT. This is a 10-digit permanent code linked to the exporter's PAN number.
 
-Under India's Foreign Trade Policy, the export of raw human hair (HS 05010010) is categorized as **"Prohibited"** with an important statutory exception:
+**What to check as a buyer**:
+- Request the supplier's IEC number and verify it on the DGFT IEC search portal
+- The IEC number must appear on all commercial invoices and export documentation
+- Suppliers without a valid IEC cannot legally export from India
 
-> *Exports are freely allowed if the Free-On-Board (FOB) value is at or above USD 65 per kilogram.*
+DEY GLOBAL EXPORTERS holds a valid IEC and provides this number on all export documents.
 
-This rule was introduced to prevent undervalued exports of high-quality temple hair. It means:
+## GST on Hair Exports
 
-1. Any legitimate Indian raw hair exporter must price raw bulk hair at minimum USD 65/kg FOB.
-2. Export documentation must reflect this pricing accurately.
-3. Customs authorities at Indian ports verify the FOB value before releasing the shipment.
+Human hair (HS 0501) is listed under the **NIL GST rate** for exports from India. This means:
+- Domestic transactions in raw hair are GST-exempt or zero-rated
+- Exporters should not be charging GST on export invoices
+- If a supplier is adding GST to your export invoice, seek clarification
 
-**For buyers**: If a supplier quotes you raw temple hair at USD 20–30/kg FOB, this should raise a serious compliance red flag. The hair may be misclassified, undervalued on documentation, or not genuine temple hair at all.
+## Required Export Documentation
 
-## Country-Specific Import Duties: Know Before You Ship
+A standard compliant raw hair shipment from India should include:
 
-Import duty rates on HS 05010010 and 05010020 vary by destination:
+1. **Commercial Invoice**: Exporter and importer details, HS code, unit price (FOB), total value, quantity in kg, country of origin
+2. **Packing List**: Bundle count, individual weights, total gross and net weight, carton dimensions
+3. **Bill of Lading (Sea) / Airway Bill (Air)**: Shipping line document confirming goods are loaded
+4. **Certificate of Origin**: Issued by the Export Inspection Agency (EIA) or Chamber of Commerce, confirms Indian origin
+5. **Shipping Bill**: Indian customs export declaration — the primary document proving legal export clearance
 
-| Country/Region | HS 05010010 Duty | HS 05010020 Duty |
-|----------------|-----------------|-----------------|
-| United States | 0% (duty-free) | 0% (duty-free) |
-| European Union | 0% (duty-free) | 0% (duty-free) |
-| United Kingdom | 0% | 0% |
-| Nigeria | ~10–20% (verify with broker) | ~10–20% |
-| South Africa | ~0–5% | ~0–5% |
-| China | ~2–3% | ~2–3% |
+For regulated destinations, additional certificates may be required. Always check import requirements at your destination with a licensed customs broker.
 
-*Always verify current rates with a licensed customs broker in your import country — tariff schedules change.*
+## What DEY GLOBAL EXPORTERS Provides
 
-## Essential Export Documentation from India
+Every shipment from our facility includes:
 
-A complete human hair export shipment from India should include:
+- Commercial invoice with correct HS code, accurate FOB valuation, and our IEC number
+- Full packing list with individual bundle weights
+- Certificate of Origin from the Export Inspection Council
+- Shipping Bill copy for customs reference
+- QC batch documentation upon request
 
-1. **Commercial Invoice** — with HS code, FOB value per kg, and exporter's IEC number
-2. **Packing List** — bundle count, weight per box, total gross/net weight
-3. **Bill of Lading (B/L)** or **Airway Bill (AWB)**
-4. **Certificate of Origin** — issued by the Export Inspection Agency (EIA) or FIEO
-5. **Shipping Bill** — filed by the exporter at Indian customs
-6. **GST/Export Rebate Documentation** — LUT (Letter of Undertaking) under GST for zero-rated exports
-7. **Quality/Phytosanitary Certificate** — where required by the destination country
-
-## How DEY GLOBAL EXPORTERS Handles Documentation
-
-Every shipment from DEY GLOBAL EXPORTERS includes:
-
-- Correctly classified HS code per product type (05010010 for raw bulk, 05010020 for wefted products)
-- FOB pricing that fully complies with DGFT minimums
-- IEC Registration: IEC-XXXX-XXXX
-- GSTIN: 19XXXXX1234X1ZX (LUT registered for zero-rated exports)
-- Pre-shipment QC report available on request
-- All documents digitally transmitted before vessel departure
-
-We work with established freight forwarders in Kolkata who are experienced in human hair export documentation, ensuring your shipment clears customs without delays.
-
-*Questions about documentation or want a pro-forma invoice? [Contact our export team](/contact).*
+*Questions about compliance for your specific destination market? [Contact our export team](/contact) — we work with buyers across the USA, EU, Africa, and Middle East regularly.*
     `,
     category: 'Export & Compliance',
     author: 'DEY GLOBAL EXPORTERS Export Team',
-    date: '2025-01-25',
-    readTime: '9 min read',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/blog_hs_code_und.png',
-    tags: ['HS Code 0501', 'Customs', 'Export Compliance', 'DGFT', 'Documentation'],
+    date: '2025-02-14',
+    readTime: '7 min read',
+    image: 'https://picsum.photos/seed/blog-hs-code-compliance/1200/630',
+    tags: ['HS Code', 'Export Compliance', 'DGFT', 'IEC', 'Documentation'],
     relatedProducts: ['raw-indian-temple-hair-bulk'],
   },
   {
     id: 'b4',
-    slug: 'how-indian-temple-hair-is-collected',
-    title: 'How Indian Temple Hair Is Collected and Why It Matters for Your Brand',
+    slug: 'indian-temple-hair-sourcing-story-tirupati',
+    title: 'Inside the Temple Hair Supply Chain: From Tirupati to Global Markets',
     excerpt:
-      'The story behind Indian temple hair — from the devotee\'s offering to your production line — is one of the most powerful brand narratives in the beauty industry. Here\'s the complete supply chain story that your customers will respect.',
+      'How does raw Indian temple hair travel from a religious offering in Tirupati to a wig manufacturer in Dallas or Lagos? This sourcing story traces the complete supply chain, from tonsure ritual to export container.',
     content: `
-# How Indian Temple Hair Is Collected and Why It Matters for Your Brand
+# Inside the Temple Hair Supply Chain: From Tirupati to Global Markets
 
-The phrase "Indian temple hair" is ubiquitous in the global extensions market. But most international buyers — even experienced ones — have only a surface-level understanding of where this hair actually comes from, how it is collected, and why the collection method matters for product quality.
+The global wig and hair extension industry runs, in large part, on a uniquely Indian institution: the religious practice of tonsure — the voluntary offering of hair at Hindu temples. Understanding this supply chain gives buyers critical context about why Indian temple hair commands a premium and why sourcing transparency matters.
 
-Understanding this story fully equips you to market your products with accuracy, build consumer trust, and justify your sourcing choices to ethically conscious customers.
+## The Origin: Tonsure at Indian Temples
 
-## The Religious Context: Tonsure as Devotional Offering
+Tonsure (mundan or tirumudi in Tamil) is the practice of shaving one's head as an offering to a deity. It is practiced across India but concentrated at major Vaishnavite temples in Andhra Pradesh, Tamil Nadu, and Karnataka.
 
-In Hindu tradition, tonsure (the ritual shaving of one's head) is a form of *mangalya* — an auspicious offering to a deity. The act is called *Mundan* in Sanskrit and represents the surrendering of vanity and ego.
+The most significant source of temple hair globally is **Tirumala Tirupati Devasthanams (TTD)** in Andhra Pradesh — one of the most visited religious sites in the world, with tens of thousands of devotees visiting daily. The temple collects an estimated 75–100 tonnes of hair annually from its tonsure halls.
 
-The most significant tonsure site in the world is **Sri Venkateswara Swamy Temple** at Tirumala, Tirupati, in Andhra Pradesh. Over 50,000 devotees undergo tonsure at this single temple daily during peak seasons, making it the largest single source of quality human hair in the world.
+Hair collection at TTD is a highly organized operation:
+- Trained barbers (called kalyanakatta) perform the tonsure in designated halls
+- Collected hair is immediately sorted and stored in climate-controlled facilities
+- The temple authority (TTD) conducts regular e-auctions open to licensed exporters
 
-Other major tonsure temples include:
-- Tirupati (Andhra Pradesh)
-- Palani Murugan Temple (Tamil Nadu)
-- Sabarimala (Kerala)
-- Shirdi Sai Baba Temple (Maharashtra)
+## The Auction System
 
-The devotee's act is wholly voluntary and spiritually motivated. The hair is never purchased from devotees — it is offered freely as part of religious practice.
+TTD and several other major temples sell their hair through transparent, government-supervised auction processes:
 
-## The Temple Auction System: Transparent and Regulated
+1. **Registration**: Licensed exporters register with the temple authority and obtain buyer credentials
+2. **Lot preview**: Hair lots (typically 50–500 kg) are displayed for inspection before auction
+3. **Online bidding**: TTD moved to e-auction format, improving transparency and access
+4. **Invoice and collection**: Winning bidders receive a temple-issued invoice and collect the lot from temple storage
 
-Hair collected at major temples — particularly Tirupati — is not sold informally. It goes through a transparent institutional process:
+This institutional auction trail is what makes temple hair traceable — unlike informally collected street hair or salon sweepings, temple hair has a paper trail back to its source.
 
-1. **Collection**: Trained barbers, employed by the temple trust, conduct tonsures. Hair is gathered in designated collection areas, sorted by approximate length, and stored in climate-controlled facilities.
+## From Temple to Exporter
 
-2. **Lot Preparation**: The temple trust (TTD at Tirupati) aggregates hair into auction lots by quality grade and weight.
+After auction, the hair moves to the exporter's facility for:
 
-3. **Public E-Auction**: TTD conducts public e-auctions, open to licensed Indian exporters. Bidding is competitive and transparent — documented online through the TTD portal.
+**Sorting and grading**: Lots are sorted by length (typically 8" to 30"+), color (natural black, grey blend, white), and texture (straight, wavy, kinky).
 
-4. **Licensing**: Successful bidders must hold a valid IEC (Import Export Code) and comply with all DGFT and customs regulations.
+**Quality inspection**: Each bundle is inspected for cuticle integrity, single-donor consistency, and absence of chemical treatment.
 
-5. **Dispatch**: Hair is transported in sealed, documented lots from temple warehouses to the exporter's processing facility.
+**Weighing and packing**: Hair is bundled to standard weights (typically 100g or 200g per bundle) and packed into export cartons with detailed packing lists.
 
-This institutional structure makes temple-sourced hair ethically superior to hair collected through informal channels, where exploitation of collectors is a documented industry concern.
+**Export documentation**: Commercial invoice, packing list, shipping bill, and Certificate of Origin are prepared.
 
-## The Salon and Collection Network: Supplementary Supply
+## The Export Journey
 
-Beyond temples, a second tier of the Indian hair supply ecosystem operates through:
+From Kolkata, our primary shipping route:
 
-- **Salon collection**: Hairdressers in cities collect cut hair from clients. Quality varies significantly — this hair is typically mixed from multiple donors and requires more intensive sorting.
-- **Household hair traders (peddlers)**: In rural and semi-urban areas, traveling hair traders exchange small amounts of hair for household goods. This is the oldest form of hair collection in India.
+- Kolkata → Syama Prasad Mookerjee Port (INSAL)
+- Port of loading to transshipment hub (Singapore or Colombo)
+- Transshipment to destination port (New York, Los Angeles, Rotterdam, Lagos, Dubai, etc.)
+- Customs clearance at destination → Delivery to buyer's warehouse
 
-At DEY GLOBAL EXPORTERS, we prioritize temple-sourced hair for all bulk and premium product lines. Our salon-network hair is used only in our single-drawn wholesale bundles, and is clearly labeled as such.
+Total door-to-door time: 4–7 days (air freight) or 22–38 days (sea freight) depending on destination.
 
-## Why This Matters for Your Brand
-
-**Ethical sourcing is a purchase driver**: Consumers increasingly ask where product ingredients originate. "Temple-donated Indian hair" is one of the few raw materials in beauty with an inherently ethical and culturally meaningful narrative.
-
-**No exploitation**: Temple hair is offered freely — there is no economic transaction with the donor. This is meaningfully different from hair collected through poverty-driven economic pressure.
+## Why Temple Hair Commands a Premium
 
 **Quality signal**: Temple hair is typically longer (devotees grow hair over months or years before offering), single-donor, and from healthy heads — producing superior Remy quality.
 
@@ -360,7 +331,7 @@ At DEY GLOBAL EXPORTERS, every temple hair shipment is accompanied by our batch 
     author: 'DEY GLOBAL EXPORTERS Export Team',
     date: '2024-12-12',
     readTime: '10 min read',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/blog_sourcing_story.png',
+    image: 'https://picsum.photos/seed/blog-tirupati-sourcing/1200/630',
     tags: ['Temple Hair', 'Sourcing', 'Ethics', 'Tirupati', 'Supply Chain'],
     relatedProducts: ['raw-indian-temple-hair-bulk', 'lace-closures-4x4-5x5-raw-indian'],
   },
@@ -468,7 +439,7 @@ We respond to all inquiries within 24 business hours. Once a purchase order is c
     author: 'DEY GLOBAL EXPORTERS Export Team',
     date: '2024-11-05',
     readTime: '11 min read',
-    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/blog_best_practices.png',
+    image: 'https://picsum.photos/seed/blog-import-lead-times/1200/630',
     tags: ['Lead Times', 'Shipping', 'USA', 'EU', 'Sea Freight', 'Air Freight', 'Incoterms'],
     relatedProducts: ['wefted-remy-hair-bundles-double-drawn', 'single-drawn-remy-bundles-wholesale'],
   },
