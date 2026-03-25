@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { ProductsClientPage } from './ProductsClientPage'
 import { CtaBanner } from '@/components/sections/CtaBanner'
 
@@ -32,34 +31,6 @@ export default function ProductsPage() {
       </section>
 
       <ProductsClientPage />
-
-      <section className="py-16 bg-[var(--surface)] border-t border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 text-sm">
-            <div>
-              <p className="font-bold text-[var(--navy)] font-heading mb-2">HS Code: 05010010</p>
-              <p className="text-[var(--text-muted)] leading-relaxed">
-                Raw, unprocessed human hair in natural state. Covers Raw Virgin Hair Ball Combo
-                and White Hair Ball. Minimum export FOB: USD 65/kg per DGFT policy.
-              </p>
-            </div>
-            <div>
-              <p className="font-bold text-[var(--navy)] font-heading mb-2">HS Code: 05010020</p>
-              <p className="text-[var(--text-muted)] leading-relaxed">
-                Worked human hair — sorted and drawn. Covers Single Drawn and Double Drawn Hair.
-                Free export with no FOB minimum.
-              </p>
-            </div>
-            <div>
-              <p className="font-bold text-[var(--navy)] font-heading mb-2">All Orders Include</p>
-              <p className="text-[var(--text-muted)] leading-relaxed">
-                Commercial invoice with HS code and FOB value, packing list, certificate of
-                origin, and QC batch report transmitted before dispatch.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <CtaBanner />
     </>
