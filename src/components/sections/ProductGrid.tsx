@@ -8,48 +8,63 @@ import { Button } from '@/components/ui/Button'
 
 const products = [
   {
-    id: 'raw-indian-temple-hair-bulk',
-    badge: 'Temple-Sourced',
-    category: 'Bulk Raw Hair',
-    name: 'Raw Indian Temple Hair — Bulk Unprocessed',
+    id: 'raw-virgin-hair-ball-combo',
+    badge: 'Best Seller',
+    category: 'Raw Bulk Hair',
+    name: 'Raw Virgin Hair Ball Combo',
     grade: 'A1 Quality',
     image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_blackball.png',
-    alt: 'Raw Indian Temple Hair Bulk Unprocessed — A1 quality single donor hair India',
-    description: 'Single-donor, cuticle-intact raw temple hair. Collected from South Indian temple donations, sorted by length, cleaned and packed with zero chemical treatment.',
+    alt: 'Raw Virgin Hair Ball Combo A1 Quality — temple sourced bulk hair India',
+    description: 'Unprocessed raw virgin hair sourced directly from South Indian temples and verified household donor networks. Natural cuticle alignment intact — no chemical treatment, no washing, no processing of any kind.',
     highlights: [
-      'Single-donor temple sourced',
-      'Zero chemical treatment',
-      'Cuticle-aligned, fully intact Remy',
+      'Available in 50 kg sacks',
+      'Untangled and loose-packed',
+      'Sourced from temples and households',
     ],
   },
   {
-    id: 'wefted-remy-bundles-double-drawn',
-    badge: 'Double Drawn',
-    category: 'Wefted Bundles',
-    name: 'Wefted Remy Bundles — Double Drawn',
+    id: 'white-hair-ball',
+    badge: 'Premium',
+    category: 'Raw Bulk Hair',
+    name: 'White Hair Ball',
     grade: 'A1 Quality',
     image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_raw_whiteball.png',
-    alt: 'Wefted Remy Bundles Double Drawn Natural Black — wholesale export India',
-    description: 'Machine-wefted double-drawn bundles from cuticle-aligned Remy hair. Uniform thickness root to tip — the preferred input for US and European extension brands.',
+    alt: 'White Hair Ball A1 Quality — paka chul premium natural white hair India',
+    description: 'Premium natural white human hair — known as "paka chul" — sourced from the same temple and household networks as our virgin hair. Highly sought after by wig manufacturers for white and grey wig production.',
     highlights: [
-      'Uniform length root to tip',
-      'Machine weft, hand-inspected',
-      'Length: 12 inch to 30 inch',
+      'Premium "paka chul" natural white hair',
+      'Temple and household sourced',
+      'Rare and high-demand product category',
     ],
   },
   {
-    id: 'single-drawn-remy-bundles',
-    badge: 'Wholesale',
-    category: 'Wefted Bundles',
-    name: 'Single Drawn Remy Bundles — Wholesale',
+    id: 'single-drawn-hair',
+    badge: null,
+    category: 'Drawn Hair',
+    name: 'Single Drawn Hair',
     grade: 'A1 Quality',
     image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_single_drawn.png',
-    alt: 'Single Drawn Remy Bundles wholesale — bulk volume export India',
-    description: 'High-volume single-drawn Remy bundles for distributors and large-format manufacturers. Natural mix of lengths, competitive FOB pricing, tiered discounts from 50kg.',
+    alt: 'Single Drawn Hair A1 Quality — 12 to 42 inch wholesale export India',
+    description: 'Single drawn hair retains the natural variation of a collected lot — a mix of lengths within each bundle. Ideal for buyers who require a full, voluminous look at a wholesale price point.',
     highlights: [
-      'Length: 10 inch to 28 inch',
-      'Volume pricing from 50 kg',
-      'Light wash only, no dye or bleach',
+      'Length: 12 inch to 42 inch',
+      'Natural volume and fullness',
+      'Competitive wholesale FOB pricing',
+    ],
+  },
+  {
+    id: 'double-drawn-hair',
+    badge: 'Premium',
+    category: 'Drawn Hair',
+    name: 'Double Drawn Hair',
+    grade: 'A1 Quality',
+    image: 'https://kwiecvvnonkolytbwvlv.supabase.co/storage/v1/object/public/Home%20Page%20Images/Product%20Page%20Files/product_double%20drawn.png',
+    alt: 'Double Drawn Hair A1 Quality — 12 to 42 inch premium uniform hair India',
+    description: 'Double drawn hair is sorted to remove shorter strands, resulting in a bundle where the majority of hairs are the same length from root to tip. The preferred choice for high-end wig brands and extension manufacturers.',
+    highlights: [
+      'Length: 12 inch to 42 inch',
+      'Uniform length from root to tip',
+      'Preferred by premium wig manufacturers',
     ],
   },
 ]
@@ -66,7 +81,7 @@ export function ProductGrid() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {products.map((product) => (
             <div key={product.id} className="border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col">
               <div className="relative aspect-[4/3]">
@@ -76,7 +91,7 @@ export function ProductGrid() {
                   fill
                   quality={90}
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 {product.badge && (
                   <span className="absolute top-3 left-3 bg-[var(--accent)] text-[var(--navy)] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
